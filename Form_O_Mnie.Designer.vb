@@ -36,14 +36,17 @@ Partial Class Form_O_Mnie
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.L_Wersja = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Btn_Zamknij
         '
-        Me.Btn_Zamknij.Location = New System.Drawing.Point(257, 232)
+        Me.Btn_Zamknij.Location = New System.Drawing.Point(257, 257)
         Me.Btn_Zamknij.Name = "Btn_Zamknij"
         Me.Btn_Zamknij.Size = New System.Drawing.Size(165, 35)
         Me.Btn_Zamknij.TabIndex = 0
@@ -65,9 +68,9 @@ Partial Class Form_O_Mnie
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.Size = New System.Drawing.Size(28, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "e-mail:"
+        Me.Label1.Text = "mail:"
         '
         'LinkMail
         '
@@ -145,18 +148,18 @@ Partial Class Form_O_Mnie
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(195, 52)
         Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Program do zmiany nazw plików PDF na podstawie ich treści oraz ich wysyłania na w" &
-    "skazany serwer FTP."
+        Me.Label5.Text = "Program for changing names of pdf according to string from inside of pdf file. Pr" &
+    "ogram can also send changed pdf file to FTP."
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Location = New System.Drawing.Point(220, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(220, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(201, 71)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "O programie"
+        Me.GroupBox1.Text = "About program"
         '
         'GroupBox2
         '
@@ -168,18 +171,39 @@ Partial Class Form_O_Mnie
         Me.GroupBox2.Controls.Add(Me.LinkSkype)
         Me.GroupBox2.Controls.Add(Me.LinkWWW)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Location = New System.Drawing.Point(220, 89)
+        Me.GroupBox2.Location = New System.Drawing.Point(220, 128)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(201, 137)
+        Me.GroupBox2.Size = New System.Drawing.Size(201, 123)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Kontakt z autorem"
+        Me.GroupBox2.Text = "Contact"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.L_Wersja)
+        Me.GroupBox3.Location = New System.Drawing.Point(221, 74)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(201, 48)
+        Me.GroupBox3.TabIndex = 14
+        Me.GroupBox3.TabStop = False
+        '
+        'L_Wersja
+        '
+        Me.L_Wersja.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.L_Wersja.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.L_Wersja.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.L_Wersja.ForeColor = System.Drawing.Color.Blue
+        Me.L_Wersja.Location = New System.Drawing.Point(3, 16)
+        Me.L_Wersja.Name = "L_Wersja"
+        Me.L_Wersja.Size = New System.Drawing.Size(195, 29)
+        Me.L_Wersja.TabIndex = 10
         '
         'Form_O_Mnie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(434, 273)
+        Me.ClientSize = New System.Drawing.Size(434, 299)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
@@ -191,6 +215,7 @@ Partial Class Form_O_Mnie
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -208,4 +233,6 @@ Partial Class Form_O_Mnie
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents L_Wersja As Label
 End Class

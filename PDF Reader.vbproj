@@ -8,11 +8,12 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PDF_Reader.My.MyApplication</StartupObject>
     <RootNamespace>PDF_Reader</RootNamespace>
-    <AssemblyName>PDF Reader</AssemblyName>
+    <AssemblyName>PDF to FTP</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,8 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationVersion>1.0.5.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -36,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>PDF Reader.xml</DocumentationFile>
+    <DocumentationFile>PDF to FTP.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>PDF Reader.xml</DocumentationFile>
+    <DocumentationFile>PDF to FTP.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -68,8 +68,11 @@
     <ApplicationIcon>Resources\back1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="itextsharp">
-      <HintPath>..\..\..\..\..\Downloads\PDFToText_bin\itextsharp.dll</HintPath>
+    <Reference Include="AutoUpdater.NET, Version=1.4.11.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>packages\Autoupdater.NET.Official.1.4.11\lib\net40\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -127,10 +130,22 @@
     <Compile Include="Form_O_Mnie.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Password.Designer.vb">
+      <DependentUpon>Form_Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Podglad.Designer.vb">
       <DependentUpon>Form_Podglad.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_Podglad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Sprawdz.Designer.vb">
+      <DependentUpon>Form_Sprawdz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Sprawdz.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Ustawienia.Designer.vb">
@@ -139,7 +154,11 @@
     <Compile Include="Form_Ustawienia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IniFile.vb" />
     <Compile Include="Module1.vb" />
+    <Compile Include="Module_Archiwum.vb" />
+    <Compile Include="Module_Dodatkowe.vb" />
+    <Compile Include="Module_INI.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -159,6 +178,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Form_Instrukcja.resx">
       <DependentUpon>Form_Instrukcja.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Licencja.resx">
       <DependentUpon>Form_Licencja.vb</DependentUpon>
@@ -172,8 +192,15 @@
     <EmbeddedResource Include="Form_O_Mnie.resx">
       <DependentUpon>Form_O_Mnie.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Password.resx">
+      <DependentUpon>Form_Password.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Podglad.resx">
       <DependentUpon>Form_Podglad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Sprawdz.resx">
+      <DependentUpon>Form_Sprawdz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Ustawienia.resx">
       <DependentUpon>Form_Ustawienia.vb</DependentUpon>
@@ -199,6 +226,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Folder.PNG" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +246,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pdf_by_mimooh.svg-56a9d1943df78cf772aaca04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol_OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_green.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lista.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

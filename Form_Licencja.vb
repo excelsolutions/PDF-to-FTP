@@ -6,7 +6,8 @@
 
 
     Private Sub RichTextBox1_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles RichTextBox1.LinkClicked
-        Process.Start("http://www.gnu.org/licenses/")
+
+        Process.Start(e.LinkText)
     End Sub
 
     Private Sub Btn_Zamknij_Click(sender As Object, e As EventArgs) Handles Btn_Zamknij.Click

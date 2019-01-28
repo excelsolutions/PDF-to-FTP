@@ -33,7 +33,7 @@ Partial Class Form_Operacje
         Me.Lista_Operacji.GridLines = True
         Me.Lista_Operacji.Location = New System.Drawing.Point(0, 0)
         Me.Lista_Operacji.Name = "Lista_Operacji"
-        Me.Lista_Operacji.Size = New System.Drawing.Size(611, 595)
+        Me.Lista_Operacji.Size = New System.Drawing.Size(690, 595)
         Me.Lista_Operacji.TabIndex = 0
         Me.Lista_Operacji.UseCompatibleStateImageBehavior = False
         Me.Lista_Operacji.View = System.Windows.Forms.View.Details
@@ -43,7 +43,7 @@ Partial Class Form_Operacje
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(611, 595)
+        Me.ClientSize = New System.Drawing.Size(690, 595)
         Me.Controls.Add(Me.Lista_Operacji)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_Operacje"

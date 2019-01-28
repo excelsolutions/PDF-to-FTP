@@ -36,24 +36,24 @@ Partial Class Form_Licencja
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(391, 324)
+        Me.GroupBox1.Size = New System.Drawing.Size(391, 352)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'Btn_Zamknij
         '
-        Me.Btn_Zamknij.Location = New System.Drawing.Point(236, 290)
+        Me.Btn_Zamknij.Location = New System.Drawing.Point(234, 310)
         Me.Btn_Zamknij.Name = "Btn_Zamknij"
         Me.Btn_Zamknij.Size = New System.Drawing.Size(151, 30)
         Me.Btn_Zamknij.TabIndex = 1
-        Me.Btn_Zamknij.Text = "Zamknij"
+        Me.Btn_Zamknij.Text = "Close"
         Me.Btn_Zamknij.UseVisualStyleBackColor = True
         '
         'RichTextBox1
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(6, 12)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(381, 272)
+        Me.RichTextBox1.Size = New System.Drawing.Size(381, 276)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
@@ -61,14 +61,14 @@ Partial Class Form_Licencja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 324)
+        Me.ClientSize = New System.Drawing.Size(391, 352)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form_Licencja"
-        Me.Text = "Licencja"
+        Me.Text = "Licence"
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
