@@ -158,7 +158,7 @@ Public Class Form_Ustawienia
 
                 .SelectionLength = Me.Num_Dlugosc.Value
                 .SelectionColor = Color.Red
-                T_Przykladowa_Nazwa.Text = T_Prefix.Text & R_Podglad.SelectedText & T_Suffix.Text & ".pdf"
+                T_Przykladowa_Nazwa.Text = T_Prefix.Text & "_1_" & R_Podglad.SelectedText & T_Suffix.Text & ".pdf"
             End With
         Else
 
@@ -180,7 +180,7 @@ Public Class Form_Ustawienia
 
                 .SelectionLength = Me.Num_Dlugosc.Value
                 .SelectionColor = Color.Red
-                T_Przykladowa_Nazwa.Text = T_Prefix.Text & R_Podglad.SelectedText & T_Suffix.Text & ".pdf"
+                T_Przykladowa_Nazwa.Text = T_Prefix.Text & "_1_" & R_Podglad.SelectedText & T_Suffix.Text & ".pdf"
             End With
         End If
 
@@ -500,8 +500,8 @@ Public Class Form_Ustawienia
             T_Interwal.Text = 0
         End If
         T_Interwal.Text = Num_Sekundy.Value + Num_Minuty.Value * 60
-        If T_Interwal.Text < 5 Then
-            T_Interwal.Text = 5
+        If T_Interwal.Text < 10 Then
+            T_Interwal.Text = 10
         End If
     End Sub
 
@@ -696,6 +696,7 @@ Public Class Form_Ustawienia
             My.Forms.Form_Ustawienia.R_Pages.Visible = False
             My.Forms.Form_Ustawienia.L_Pic_Half_PDF.Visible = False
             My.Forms.Form_Ustawienia.L_Pic_Pages.Visible = False
+            My.Forms.Form_Ustawienia.l_Page_Settings_Opis.Visible = True
         Else
             L_Pick_Process_File.BackColor = Color.Red
             My.Forms.Form_Ustawienia.SplitC.Visible = True
@@ -703,6 +704,7 @@ Public Class Form_Ustawienia
             My.Forms.Form_Ustawienia.R_Pages.Visible = True
             My.Forms.Form_Ustawienia.L_Pic_Half_PDF.Visible = True
             My.Forms.Form_Ustawienia.L_Pic_Pages.Visible = True
+            My.Forms.Form_Ustawienia.l_Page_Settings_Opis.Visible = False
         End If
 
         Kontrolka = L_Pick_Process_File
@@ -788,6 +790,58 @@ Public Class Form_Ustawienia
     End Sub
 
     Private Sub L_Przyklad_Enter(sender As Object, e As EventArgs) Handles L_Przyklad.Enter
+
+    End Sub
+
+    Private Sub L_Pic_Contain_Click(sender As Object, e As EventArgs) Handles L_Pic_Contain.Click
+
+    End Sub
+
+    Private Sub R_Group_Pages_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub L_Pic_Not_Contain_Click(sender As Object, e As EventArgs) Handles L_Pic_Not_Contain.Click
+
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles C_Group_Pages.CheckedChanged
+        Timer_Pic.Enabled = False
+        Kontrolka.BackColor = Kolor_Kontrolki
+        If C_Group_Pages.Checked = True Then
+            L_Pic_Group_Pages.BackColor = Color.Lime
+        Else
+            L_Pic_Group_Pages.BackColor = Color.Red
+        End If
+
+        Kontrolka = L_Pic_Group_Pages
+        Kolor_Kontrolki = L_Pic_Group_Pages.BackColor
+        Timer_Pic.Enabled = True
+    End Sub
+
+    Private Sub Check_Duplicates_CheckedChanged(sender As Object, e As EventArgs) Handles Check_Duplicates.CheckedChanged
+        Timer_Pic.Enabled = False
+        Kontrolka.BackColor = Kolor_Kontrolki
+        If Check_Duplicates.Checked = True Then
+            L_Pic_Duplicates.BackColor = Color.Lime
+        Else
+            L_Pic_Duplicates.BackColor = Color.Red
+        End If
+        Kontrolka = L_Pic_Duplicates
+        Kolor_Kontrolki = L_Pic_Duplicates.BackColor
+        Timer_Pic.Enabled = True
+    End Sub
+
+    Private Sub L_Pic_Check_Click(sender As Object, e As EventArgs) Handles L_Pic_Check.Click
+
+    End Sub
+
+    Private Sub Group_FTP_Enter(sender As Object, e As EventArgs) Handles Group_FTP.Enter
+
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
 End Class

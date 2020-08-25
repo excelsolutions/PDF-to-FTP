@@ -31,8 +31,6 @@ Partial Class Form_O_Mnie
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LinkWWW = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.LinkTel = New System.Windows.Forms.LinkLabel()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -121,26 +119,6 @@ Partial Class Form_O_Mnie
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "www:"
         '
-        'LinkTel
-        '
-        Me.LinkTel.AutoSize = True
-        Me.LinkTel.LinkColor = System.Drawing.Color.Black
-        Me.LinkTel.Location = New System.Drawing.Point(47, 51)
-        Me.LinkTel.Name = "LinkTel"
-        Me.LinkTel.Size = New System.Drawing.Size(67, 13)
-        Me.LinkTel.TabIndex = 9
-        Me.LinkTel.TabStop = True
-        Me.LinkTel.Text = "792-792-211"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 51)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(21, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "tel:"
-        '
         'Label5
         '
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
@@ -165,9 +143,7 @@ Partial Class Form_O_Mnie
         '
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.LinkMail)
-        Me.GroupBox2.Controls.Add(Me.LinkTel)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.LinkSkype)
         Me.GroupBox2.Controls.Add(Me.LinkWWW)
         Me.GroupBox2.Controls.Add(Me.Label3)
@@ -228,8 +204,6 @@ Partial Class Form_O_Mnie
     Friend WithEvents Label2 As Label
     Friend WithEvents LinkWWW As LinkLabel
     Friend WithEvents Label3 As Label
-    Friend WithEvents LinkTel As LinkLabel
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox

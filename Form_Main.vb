@@ -120,6 +120,8 @@ Public Class Form_Main
             Timer_Automat.Enabled = True
             ToolStripAutomation.Image = My.Resources.Green_Button
         End If
+        'Włączenie aktualizacji ilosci plikow
+        Timer_Checker.Enabled = True
     End Sub
 
 
@@ -183,8 +185,29 @@ Public Class Form_Main
 
 
     Private Sub Timer_Checker_Tick(sender As Object, e As EventArgs) Handles Timer_Checker.Tick
+        Dim i As Integer = 0
         'wyłaczone automatyczne aktualizacje
-        'Aktualizacja_Statusow(True)
+        'Poniższa część wykonuje sie stale, nieustannie
+        Dim Folder As String = Folder_PDF
+        If Folder <> "" Then
+            Try
+                For Each Plik As String In My.Computer.FileSystem.GetFiles(Folder)
+                    If UCase(Mid(Plik, Plik.Length - 3, 4)) = UCase(".pdf") Then
+                        i = i + 1
+                    End If
+                Next
+            Catch ex As Exception
+                Try
+                    Zapisz_Log_Txt(ex.Message)
+                Catch ex1 As Exception
+
+                End Try
+
+                My.Forms.Form_Main.L_LIczba_Plikow.Text = 0
+            End Try
+        End If
+
+        My.Forms.Form_Main.L_LIczba_Plikow.Text = i
         'PROBLEM: Brak odswiezania ilosci plików count
     End Sub
 
@@ -232,9 +255,13 @@ Public Class Form_Main
     End Sub
 
     Private Sub UstawieniaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UstawieniaToolStripMenuItem1.Click
-        'Timer_Automat.Enabled = False
-        Form_Password.ShowDialog()
+        Me.Hide()
+        Form_Ustawienia.Show()
+        'Form_Password.ShowDialog()
 
+
+
+        'Timer_Automat.Enabled = False
         ' If InputBox("Enter the password:", "Password") = "qwerty1" Then
         ' Form_Ustawienia.ShowDialog()
         'End If
@@ -377,14 +404,27 @@ Public Class Form_Main
                 ToolStripError.Text = ""
                 ToolStripError.ToolTipText = ToolStripError.Text
                 ToolStripError.ForeColor = Color.Green
-                If Work_On_Copies = True Then
-                    Przetworz_Pliki2(False, True, True, False)
+                Form_Operacje.Lista_Operacji.Items.Clear() 'wyczyść formę z operacjami. Dałem ostatni parametr true bo na podstawie operacji sprawdza duble
+                If Automation = 0 Then '2020-06-03 właczyłem wysylanie na ftp w przypadku automatu
+                    If Work_On_Copies = True Then
+                        Przetworz_Pliki2(False, True, True, True)
+                    Else
+                        Przetworz_Pliki2(False, True, False, True)
+                    End If
                 Else
-                    Przetworz_Pliki2(False, True, False, False)
+                    If Work_On_Copies = True Then
+                        Przetworz_Pliki2(True, True, True, True)
+                    Else
+                        Przetworz_Pliki2(True, True, False, True)
+                    End If
                 End If
 
+
             Else
-                ToolStripError.Text = "No files inside indicated directory"
+                If Automation = 0 Then
+                    ToolStripError.Text = "No files inside indicated directory"
+                End If
+
                 ToolStripError.ToolTipText = ToolStripError.Text
                 ToolStripError.ForeColor = Color.Red
             End If
@@ -426,9 +466,12 @@ Public Class Form_Main
     End Sub
 
     Private Sub ToolStripHide_Click(sender As Object, e As EventArgs) Handles ToolStripHide.Click
-        'https://www.dreamincode.net/forums/topic/53448-minimize-to-system-tray/
-        Me.WindowState = FormWindowState.Minimized
-        Me.Visible = False
+        If MsgBox("This option will minimize program to system tray. You can turn off program only from task manager. Continue?", vbYesNo, "Hide program") = vbYes Then
+            'https://www.dreamincode.net/forums/topic/53448-minimize-to-system-tray/
+            Me.WindowState = FormWindowState.Minimized
+            Me.Visible = False
+        End If
+
     End Sub
 
     Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
@@ -478,14 +521,9 @@ Public Class Form_Main
             ToolStripError.ForeColor = Color.Red
         End Try
     End Sub
-End Class
-'RLP_RP14_XXXXXXXXXXX_Y_ZZZZZZZZZZZZZZZ.FFF
 
-'Przykład: RLP_RP14_10000839000_1_604953697.pdf
-'Elementy nazwy
-'RLP_RP14 – stała nazwa
-'XXXXXXXXXXX –stała wartość - numer relacji Klienta C(11 znaków – informację o numerze relacji udziela Dział Obsługi Klienta)
-'Y – wartość zmienna - określająca numer kolejny dokumentu dla 1 przesyłki (liczba porządkowa załączanych plików) 
-'ZZZZZZZZZZZZZZZ – wartość zmienna - numer referencyjny przesyłki lub numer przesyłki TMS (15 znaków)
-'FFF – format pliku (pdf lub tif)
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+End Class
 

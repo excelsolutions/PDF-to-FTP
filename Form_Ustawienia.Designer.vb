@@ -50,6 +50,8 @@ Partial Class Form_Ustawienia
         Me.Check_Rename = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.L_Pic_Duplicates = New System.Windows.Forms.Label()
+        Me.Check_Duplicates = New System.Windows.Forms.CheckBox()
         Me.L_Wybierz_Przyklad = New System.Windows.Forms.Label()
         Me.Pic = New System.Windows.Forms.PictureBox()
         Me.L_Pozycja_Karety = New System.Windows.Forms.Label()
@@ -117,6 +119,7 @@ Partial Class Form_Ustawienia
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.l_Page_Settings_Opis = New System.Windows.Forms.Label()
         Me.R_Half_PDF = New System.Windows.Forms.RadioButton()
         Me.R_Pages = New System.Windows.Forms.RadioButton()
         Me.Check_Process_File = New System.Windows.Forms.CheckBox()
@@ -124,6 +127,8 @@ Partial Class Form_Ustawienia
         Me.SplitC = New System.Windows.Forms.SplitContainer()
         Me.L_Polowa1 = New System.Windows.Forms.Label()
         Me.L_Polowa2 = New System.Windows.Forms.Label()
+        Me.C_Group_Pages = New System.Windows.Forms.CheckBox()
+        Me.L_Pic_Group_Pages = New System.Windows.Forms.Label()
         Me.R_Not_Contain = New System.Windows.Forms.RadioButton()
         Me.R_Contain = New System.Windows.Forms.RadioButton()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -301,7 +306,7 @@ Partial Class Form_Ustawienia
         '
         'Btn_Zapisz
         '
-        Me.Btn_Zapisz.Location = New System.Drawing.Point(324, 364)
+        Me.Btn_Zapisz.Location = New System.Drawing.Point(327, 403)
         Me.Btn_Zapisz.Name = "Btn_Zapisz"
         Me.Btn_Zapisz.Size = New System.Drawing.Size(150, 37)
         Me.Btn_Zapisz.TabIndex = 16
@@ -311,7 +316,7 @@ Partial Class Form_Ustawienia
         'Btn_Anuluj
         '
         Me.Btn_Anuluj.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Btn_Anuluj.Location = New System.Drawing.Point(167, 364)
+        Me.Btn_Anuluj.Location = New System.Drawing.Point(170, 403)
         Me.Btn_Anuluj.Name = "Btn_Anuluj"
         Me.Btn_Anuluj.Size = New System.Drawing.Size(150, 37)
         Me.Btn_Anuluj.TabIndex = 17
@@ -332,7 +337,7 @@ Partial Class Form_Ustawienia
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(484, 358)
+        Me.TabControl1.Size = New System.Drawing.Size(484, 397)
         Me.TabControl1.TabIndex = 18
         '
         'TabPage1
@@ -345,7 +350,7 @@ Partial Class Form_Ustawienia
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(476, 332)
+        Me.TabPage1.Size = New System.Drawing.Size(476, 371)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Path settings"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -406,13 +411,15 @@ Partial Class Form_Ustawienia
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(476, 332)
+        Me.TabPage2.Size = New System.Drawing.Size(476, 371)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "File name settings"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.L_Pic_Duplicates)
+        Me.GroupBox1.Controls.Add(Me.Check_Duplicates)
         Me.GroupBox1.Controls.Add(Me.L_Wybierz_Przyklad)
         Me.GroupBox1.Controls.Add(Me.Pic)
         Me.GroupBox1.Controls.Add(Me.L_Pozycja_Karety)
@@ -434,17 +441,37 @@ Partial Class Form_Ustawienia
         Me.GroupBox1.Controls.Add(Me.L_Opis_Careta)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(460, 319)
+        Me.GroupBox1.Size = New System.Drawing.Size(460, 362)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Position and lenght of string to be cut"
+        '
+        'L_Pic_Duplicates
+        '
+        Me.L_Pic_Duplicates.BackColor = System.Drawing.Color.Red
+        Me.L_Pic_Duplicates.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.L_Pic_Duplicates.Location = New System.Drawing.Point(17, 165)
+        Me.L_Pic_Duplicates.Name = "L_Pic_Duplicates"
+        Me.L_Pic_Duplicates.Size = New System.Drawing.Size(13, 14)
+        Me.L_Pic_Duplicates.TabIndex = 39
+        '
+        'Check_Duplicates
+        '
+        Me.Check_Duplicates.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Check_Duplicates.AutoSize = True
+        Me.Check_Duplicates.Location = New System.Drawing.Point(34, 160)
+        Me.Check_Duplicates.Name = "Check_Duplicates"
+        Me.Check_Duplicates.Size = New System.Drawing.Size(93, 23)
+        Me.Check_Duplicates.TabIndex = 38
+        Me.Check_Duplicates.Text = "Allow duplicates"
+        Me.Check_Duplicates.UseVisualStyleBackColor = True
         '
         'L_Wybierz_Przyklad
         '
         Me.L_Wybierz_Przyklad.Cursor = System.Windows.Forms.Cursors.Hand
         Me.L_Wybierz_Przyklad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.L_Wybierz_Przyklad.ForeColor = System.Drawing.Color.Blue
-        Me.L_Wybierz_Przyklad.Location = New System.Drawing.Point(10, 168)
+        Me.L_Wybierz_Przyklad.Location = New System.Drawing.Point(10, 185)
         Me.L_Wybierz_Przyklad.Name = "L_Wybierz_Przyklad"
         Me.L_Wybierz_Przyklad.Size = New System.Drawing.Size(228, 18)
         Me.L_Wybierz_Przyklad.TabIndex = 37
@@ -465,7 +492,7 @@ Partial Class Form_Ustawienia
         'L_Pozycja_Karety
         '
         Me.L_Pozycja_Karety.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.L_Pozycja_Karety.Location = New System.Drawing.Point(421, 164)
+        Me.L_Pozycja_Karety.Location = New System.Drawing.Point(421, 181)
         Me.L_Pozycja_Karety.Name = "L_Pozycja_Karety"
         Me.L_Pozycja_Karety.Size = New System.Drawing.Size(36, 20)
         Me.L_Pozycja_Karety.TabIndex = 20
@@ -549,7 +576,7 @@ Partial Class Form_Ustawienia
         '
         'Btn_Wybierz_Z_Zaznaczenia
         '
-        Me.Btn_Wybierz_Z_Zaznaczenia.Location = New System.Drawing.Point(272, 167)
+        Me.Btn_Wybierz_Z_Zaznaczenia.Location = New System.Drawing.Point(272, 184)
         Me.Btn_Wybierz_Z_Zaznaczenia.Name = "Btn_Wybierz_Z_Zaznaczenia"
         Me.Btn_Wybierz_Z_Zaznaczenia.Size = New System.Drawing.Size(112, 19)
         Me.Btn_Wybierz_Z_Zaznaczenia.TabIndex = 10
@@ -588,7 +615,7 @@ Partial Class Form_Ustawienia
         '
         Me.Pic_Wybierz_Przyklad.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Pic_Wybierz_Przyklad.Image = Global.PDF_Reader.My.Resources.Resources.pdf_obrazek
-        Me.Pic_Wybierz_Przyklad.Location = New System.Drawing.Point(244, 166)
+        Me.Pic_Wybierz_Przyklad.Location = New System.Drawing.Point(244, 183)
         Me.Pic_Wybierz_Przyklad.Name = "Pic_Wybierz_Przyklad"
         Me.Pic_Wybierz_Przyklad.Size = New System.Drawing.Size(21, 20)
         Me.Pic_Wybierz_Przyklad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -598,9 +625,9 @@ Partial Class Form_Ustawienia
         'R_Podglad
         '
         Me.R_Podglad.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.R_Podglad.Location = New System.Drawing.Point(13, 192)
+        Me.R_Podglad.Location = New System.Drawing.Point(13, 209)
         Me.R_Podglad.Name = "R_Podglad"
-        Me.R_Podglad.Size = New System.Drawing.Size(437, 121)
+        Me.R_Podglad.Size = New System.Drawing.Size(437, 147)
         Me.R_Podglad.TabIndex = 8
         Me.R_Podglad.Text = resources.GetString("R_Podglad.Text")
         '
@@ -618,7 +645,7 @@ Partial Class Form_Ustawienia
         '
         'L_Opis_Careta
         '
-        Me.L_Opis_Careta.Location = New System.Drawing.Point(387, 157)
+        Me.L_Opis_Careta.Location = New System.Drawing.Point(387, 174)
         Me.L_Opis_Careta.Name = "L_Opis_Careta"
         Me.L_Opis_Careta.Size = New System.Drawing.Size(39, 27)
         Me.L_Opis_Careta.TabIndex = 19
@@ -637,7 +664,7 @@ Partial Class Form_Ustawienia
         Me.TabPage3.Controls.Add(Me.L_Wybierz_Przyklad1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(476, 332)
+        Me.TabPage3.Size = New System.Drawing.Size(476, 371)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Checking PDF algorythm"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -817,7 +844,7 @@ Partial Class Form_Ustawienia
         Me.R_Podglad1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.R_Podglad1.Location = New System.Drawing.Point(21, 193)
         Me.R_Podglad1.Name = "R_Podglad1"
-        Me.R_Podglad1.Size = New System.Drawing.Size(437, 132)
+        Me.R_Podglad1.Size = New System.Drawing.Size(437, 175)
         Me.R_Podglad1.TabIndex = 25
         Me.R_Podglad1.Text = resources.GetString("R_Podglad1.Text")
         '
@@ -841,7 +868,7 @@ Partial Class Form_Ustawienia
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(476, 332)
+        Me.TabPage4.Size = New System.Drawing.Size(476, 371)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Automation"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1072,9 +1099,9 @@ Partial Class Form_Ustawienia
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(207, 21)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(98, 13)
+        Me.Label15.Size = New System.Drawing.Size(104, 13)
         Me.Label15.TabIndex = 26
-        Me.Label15.Text = "Interval [s] (min=5s)"
+        Me.Label15.Text = "Interval [s] (min=10s)"
         '
         'Label6
         '
@@ -1087,6 +1114,7 @@ Partial Class Form_Ustawienia
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.l_Page_Settings_Opis)
         Me.TabPage5.Controls.Add(Me.R_Half_PDF)
         Me.TabPage5.Controls.Add(Me.R_Pages)
         Me.TabPage5.Controls.Add(Me.Check_Process_File)
@@ -1096,10 +1124,20 @@ Partial Class Form_Ustawienia
         Me.TabPage5.Controls.Add(Me.L_Pic_Half_PDF)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(476, 332)
+        Me.TabPage5.Size = New System.Drawing.Size(476, 371)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Page settings"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'l_Page_Settings_Opis
+        '
+        Me.l_Page_Settings_Opis.Location = New System.Drawing.Point(16, 63)
+        Me.l_Page_Settings_Opis.Name = "l_Page_Settings_Opis"
+        Me.l_Page_Settings_Opis.Size = New System.Drawing.Size(436, 200)
+        Me.l_Page_Settings_Opis.TabIndex = 47
+        Me.l_Page_Settings_Opis.Text = "If option ""Process whole PDF file"" is disabled, program will split PDF file to pa" &
+    "ges usings settings on this page."
+        Me.l_Page_Settings_Opis.Visible = False
         '
         'R_Half_PDF
         '
@@ -1155,6 +1193,8 @@ Partial Class Form_Ustawienia
         '
         'SplitC.Panel2
         '
+        Me.SplitC.Panel2.Controls.Add(Me.C_Group_Pages)
+        Me.SplitC.Panel2.Controls.Add(Me.L_Pic_Group_Pages)
         Me.SplitC.Panel2.Controls.Add(Me.R_Not_Contain)
         Me.SplitC.Panel2.Controls.Add(Me.R_Contain)
         Me.SplitC.Panel2.Controls.Add(Me.Label22)
@@ -1189,6 +1229,25 @@ Partial Class Form_Ustawienia
         Me.L_Polowa2.TabIndex = 39
         Me.L_Polowa2.Text = "Last half"
         Me.L_Polowa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'C_Group_Pages
+        '
+        Me.C_Group_Pages.Appearance = System.Windows.Forms.Appearance.Button
+        Me.C_Group_Pages.Location = New System.Drawing.Point(44, 161)
+        Me.C_Group_Pages.Name = "C_Group_Pages"
+        Me.C_Group_Pages.Size = New System.Drawing.Size(90, 38)
+        Me.C_Group_Pages.TabIndex = 52
+        Me.C_Group_Pages.Text = "Group pages"
+        Me.C_Group_Pages.UseVisualStyleBackColor = True
+        '
+        'L_Pic_Group_Pages
+        '
+        Me.L_Pic_Group_Pages.BackColor = System.Drawing.Color.Red
+        Me.L_Pic_Group_Pages.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.L_Pic_Group_Pages.Location = New System.Drawing.Point(25, 174)
+        Me.L_Pic_Group_Pages.Name = "L_Pic_Group_Pages"
+        Me.L_Pic_Group_Pages.Size = New System.Drawing.Size(13, 14)
+        Me.L_Pic_Group_Pages.TabIndex = 49
         '
         'R_Not_Contain
         '
@@ -1285,7 +1344,7 @@ Partial Class Form_Ustawienia
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Btn_Anuluj
-        Me.ClientSize = New System.Drawing.Size(482, 408)
+        Me.ClientSize = New System.Drawing.Size(482, 452)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Btn_Anuluj)
         Me.Controls.Add(Me.Btn_Zapisz)
@@ -1453,4 +1512,9 @@ Partial Class Form_Ustawienia
     Friend WithEvents R_Pages As RadioButton
     Friend WithEvents R_Not_Contain As RadioButton
     Friend WithEvents R_Contain As RadioButton
+    Friend WithEvents L_Pic_Group_Pages As Label
+    Friend WithEvents C_Group_Pages As CheckBox
+    Friend WithEvents l_Page_Settings_Opis As Label
+    Friend WithEvents L_Pic_Duplicates As Label
+    Friend WithEvents Check_Duplicates As CheckBox
 End Class

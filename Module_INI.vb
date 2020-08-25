@@ -28,12 +28,14 @@ Module Module_INI
     Public Automation As String
     Public Type_Of_Automat As String
     Public Work_On_Copies As String
+    Public Allow_Duplicates As String
     'Sekcja 6 Dzielenie plikow
     Public Whole_File As String 'procesuj caly plik czy tylko część
     Public Half_or_Specific As String 'bierz połowe stron czy określ jakie chcesz brać
     Public Contain_Word As String 'strony do wzięcia mają zawierac słowa czy nie
     Public First_Last_Pages As String 'bierz 1 czy 2 połowę plik updf
     Public Contain_Text As String 'jesli ten tekst znajdzie się na stronie PDF to program ma brac ją do dalszego procesowania
+    Public Group_Pages As String 'grupowanie stron ze znalezionym słowem lub zapis jako osobna strona
 
 
     Sub ZAPISZ_USTAWIENIA_INI()
@@ -88,6 +90,12 @@ Module Module_INI
             Half_or_Specific = 1 'bierz okreslone strony z PDF
         End If
         Contain_Text = My.Forms.Form_Ustawienia.T_Tekst_Na_Stronach.Text
+        If My.Forms.Form_Ustawienia.C_Group_Pages.Checked = True Then
+            Group_Pages = 1 'grupuj strony z tym samym słowem
+        Else
+            Group_Pages = 0 'Zapisuj strony ze znalezionym słowem osobno
+        End If
+        Allow_Duplicates = Form_Ustawienia.Check_Duplicates.CheckState
 
         'Sciezka do pliku ustawień INI
         Dim Directory As String = My.Application.Info.DirectoryPath
@@ -119,13 +127,14 @@ Module Module_INI
         ini.AddSection("OTHER_SETTINGS").AddKey("Automation").Value = Automation
         ini.AddSection("OTHER_SETTINGS").AddKey("Type_Of_Automat").Value = Type_Of_Automat
         ini.AddSection("OTHER_SETTINGS").AddKey("Work_On_Copies").Value = Work_On_Copies
+        ini.AddSection("OTHER_SETTINGS").AddKey("Allow_Duplicates").Value = Allow_Duplicates
 
         ini.AddSection("SPLITTING FILES").AddKey("Whole_File").Value = Whole_File
         ini.AddSection("SPLITTING FILES").AddKey("Half_or_Specific").Value = Half_or_Specific
         ini.AddSection("SPLITTING FILES").AddKey("Contain_Word").Value = Contain_Word
         ini.AddSection("SPLITTING FILES").AddKey("First_Last_Pages").Value = First_Last_Pages
         ini.AddSection("SPLITTING FILES").AddKey("Contain_Text").Value = Contain_Text
-
+        ini.AddSection("SPLITTING FILES").AddKey("Group_Pages").Value = Group_Pages
         ' Key Rename Test
         'Trace.Write("Key Rename Key1 -> KeyTemp Test: ")
         'If ini.RenameKey("TEST_SECTION", "Key1", "KeyTemp") Then
@@ -283,6 +292,19 @@ Module Module_INI
         Contain_Word = ini.GetSection("SPLITTING FILES").GetKey("Contain_Word").Value
         Contain_Text = ini.GetSection("SPLITTING FILES").GetKey("Contain_Text").Value
         First_Last_Pages = ini.GetSection("SPLITTING FILES").GetKey("First_Last_Pages").Value
+        If ini.RenameKey("SPLITTING FILES", "Group_Pages", "Group_Pages") Then
+            Group_Pages = ini.GetSection("SPLITTING FILES").GetKey("Group_Pages").Value
+        Else
+            ini.AddSection("SPLITTING FILES").AddKey("Group_Pages").Value = 1
+            ini.Save(Directory & "\Preferences.ini")
+        End If
+
+        If ini.RenameKey("OTHER_SETTINGS", "Allow_Duplicates", "Allow_Duplicates") Then
+            Allow_Duplicates = ini.GetSection("OTHER_SETTINGS").GetKey("Allow_Duplicates").Value
+        Else
+            ini.AddSection("OTHER_SETTINGS FILES").AddKey("Allow_Duplicates").Value = 1
+            ini.Save(Directory & "\Preferences.ini")
+        End If
 
         Form_Ustawienia.T_Sciezka_PDF.Text = Folder_PDF
         Form_Ustawienia.T_Sciezka_FTP.Text = Folder_FTP
@@ -303,8 +325,12 @@ Module Module_INI
         Form_Ustawienia.CheckAutomatyzacja.Checked = Automation
         If Automation = 1 Then
             Form_Ustawienia.L_PIC_Auto.BackColor = Color.Lime
+            Form_Main.ToolStripAutomation.Visible = True
+            Form_Main.ToolStripStatusLabel1.Visible = True
         Else
             Form_Ustawienia.L_PIC_Auto.BackColor = Color.Red
+            Form_Main.ToolStripAutomation.Visible = False
+            Form_Main.ToolStripStatusLabel1.Visible = False
         End If
 
         If Type_Of_Automat = "Only_Save" Then 'ustawienia automatu
@@ -328,6 +354,7 @@ Module Module_INI
         Form_Ustawienia.T_Sciezka_Destination.Text = Folder_Dest
         Form_Ustawienia.Check_Process_File.Checked = Whole_File
         Form_Ustawienia.T_Tekst_Na_Stronach.Text = Contain_Text
+
         Form_Ustawienia.Aktualizuj_Kolor()
         If Whole_File = 1 Then
             My.Forms.Form_Ustawienia.Check_Process_File.Checked = True
@@ -337,6 +364,7 @@ Module Module_INI
             My.Forms.Form_Ustawienia.R_Pages.Visible = False
             My.Forms.Form_Ustawienia.L_Pic_Half_PDF.Visible = False
             My.Forms.Form_Ustawienia.L_Pic_Pages.Visible = False
+            My.Forms.Form_Ustawienia.l_Page_Settings_Opis.Visible = True
         Else
             My.Forms.Form_Ustawienia.Check_Process_File.Checked = False
             My.Forms.Form_Ustawienia.L_Pick_Process_File.BackColor = Color.Red
@@ -345,6 +373,7 @@ Module Module_INI
             My.Forms.Form_Ustawienia.R_Pages.Visible = True
             My.Forms.Form_Ustawienia.L_Pic_Half_PDF.Visible = True
             My.Forms.Form_Ustawienia.L_Pic_Pages.Visible = True
+            My.Forms.Form_Ustawienia.l_Page_Settings_Opis.Visible = False
         End If
 
         If First_Last_Pages = 0 Then '0 - pierwsza połowa, 1- druga połowa
@@ -381,7 +410,16 @@ Module Module_INI
             My.Forms.Form_Ustawienia.SplitC.Panel1.Enabled = False
             My.Forms.Form_Ustawienia.SplitC.Panel2.Enabled = True
         End If
-
+        If Group_Pages = 1 Then
+            My.Forms.Form_Ustawienia.C_Group_Pages.Checked = True
+        Else
+            My.Forms.Form_Ustawienia.C_Group_Pages.Checked = False
+        End If
+        If Allow_Duplicates = 1 Then
+            My.Forms.Form_Ustawienia.Check_Duplicates.Checked = True
+        Else
+            My.Forms.Form_Ustawienia.Check_Duplicates.Checked = False
+        End If
 
         'If My.Forms.Form_Ustawienia.Check_Half_PDF.Checked = True Then
         '    First_Last_Pages = True 'bierz jedna albo 2 połowe

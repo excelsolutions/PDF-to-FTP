@@ -14,12 +14,8 @@ Public Class Form_O_Mnie
 
     End Sub
 
-    Private Sub LinkTel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkTel.LinkClicked
-        Try
-            My.Computer.Clipboard.SetText(LinkTel.Text)
-        Catch ex As Exception
+    Private Sub LinkTel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
 
-        End Try
 
     End Sub
 

@@ -176,7 +176,7 @@ Partial Class Form_Main
         '
         'Timer_Checker
         '
-        Me.Timer_Checker.Interval = 3000
+        Me.Timer_Checker.Interval = 1000
         '
         'NotifyIcon1
         '
@@ -188,24 +188,24 @@ Partial Class Form_Main
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuOtworz, Me.ToolStripMenuPrzeslij, Me.ToolStripMenuZamknij})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(159, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(158, 70)
         '
         'ToolStripMenuOtworz
         '
         Me.ToolStripMenuOtworz.Name = "ToolStripMenuOtworz"
-        Me.ToolStripMenuOtworz.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripMenuOtworz.Size = New System.Drawing.Size(157, 22)
         Me.ToolStripMenuOtworz.Text = "Open program"
         '
         'ToolStripMenuPrzeslij
         '
         Me.ToolStripMenuPrzeslij.Name = "ToolStripMenuPrzeslij"
-        Me.ToolStripMenuPrzeslij.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripMenuPrzeslij.Size = New System.Drawing.Size(157, 22)
         Me.ToolStripMenuPrzeslij.Text = "Sent files to FTP"
         '
         'ToolStripMenuZamknij
         '
         Me.ToolStripMenuZamknij.Name = "ToolStripMenuZamknij"
-        Me.ToolStripMenuZamknij.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripMenuZamknij.Size = New System.Drawing.Size(157, 22)
         Me.ToolStripMenuZamknij.Text = "Close program"
         '
         'GroupBox1
@@ -413,6 +413,7 @@ Partial Class Form_Main
         Me.ToolStripDisableRefreshing.Size = New System.Drawing.Size(63, 19)
         Me.ToolStripDisableRefreshing.Text = "Check On"
         Me.ToolStripDisableRefreshing.ToolTipText = "Hide program"
+        Me.ToolStripDisableRefreshing.Visible = False
         '
         'Timer_Automat
         '
@@ -431,7 +432,7 @@ Partial Class Form_Main
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "Form_Main"
-        Me.Text = "PDF ---> FTP"
+        Me.Text = "PDF ---> FTP 1.0.6"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
