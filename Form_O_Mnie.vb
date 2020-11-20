@@ -19,15 +19,7 @@ Public Class Form_O_Mnie
 
     End Sub
 
-    Private Sub LinkSkype_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkSkype.LinkClicked
-        Try
-            My.Computer.Clipboard.SetText(LinkSkype.Text)
-            MsgBox("Kontakt: " & LinkSkype.Text & " skopiowano do schowka")
-        Catch ex As Exception
 
-        End Try
-
-    End Sub
 
     Private Sub LinkWWW_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkWWW.LinkClicked
         Try

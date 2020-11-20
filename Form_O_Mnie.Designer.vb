@@ -27,8 +27,6 @@ Partial Class Form_O_Mnie
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LinkMail = New System.Windows.Forms.LinkLabel()
-        Me.LinkSkype = New System.Windows.Forms.LinkLabel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.LinkWWW = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -80,26 +78,6 @@ Partial Class Form_O_Mnie
         Me.LinkMail.TabStop = True
         Me.LinkMail.Text = "lukasz.r.morawski@gmail.com"
         '
-        'LinkSkype
-        '
-        Me.LinkSkype.AutoSize = True
-        Me.LinkSkype.LinkColor = System.Drawing.Color.Black
-        Me.LinkSkype.Location = New System.Drawing.Point(47, 76)
-        Me.LinkSkype.Name = "LinkSkype"
-        Me.LinkSkype.Size = New System.Drawing.Size(150, 13)
-        Me.LinkSkype.TabIndex = 5
-        Me.LinkSkype.TabStop = True
-        Me.LinkSkype.Text = "lukaszmorawski@outlook.com"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 76)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "skype:"
-        '
         'LinkWWW
         '
         Me.LinkWWW.AutoSize = True
@@ -143,8 +121,6 @@ Partial Class Form_O_Mnie
         '
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.LinkMail)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.LinkSkype)
         Me.GroupBox2.Controls.Add(Me.LinkWWW)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Location = New System.Drawing.Point(220, 128)
@@ -200,8 +176,6 @@ Partial Class Form_O_Mnie
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LinkMail As LinkLabel
-    Friend WithEvents LinkSkype As LinkLabel
-    Friend WithEvents Label2 As Label
     Friend WithEvents LinkWWW As LinkLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
