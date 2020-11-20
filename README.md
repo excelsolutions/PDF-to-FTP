@@ -16,4 +16,5 @@ PROGRAM REQUIREMENTS:
 
 USED TECHNOLOGY:
 •	Program created in Visual Basic w Visual Studio 2017
-•	Used itextsharp library (https://sourceforge.net/projects/itextsharp/) 3.0.10.0 on Affero GNU Public License
+•	Used itextsharp library (https://sourceforge.net/projects/itextsharp/) 5.5.13 on Affero GNU Public License
+•	Used AutoUpdater.NET library avaible on the website: https://github.com/ravibpatel/AutoUpdater.NET
