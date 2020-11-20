@@ -55,9 +55,9 @@ Partial Class Form_Main
         Me.L_Current_Interval = New System.Windows.Forms.Label()
         Me.L_Count_Loops = New System.Windows.Forms.Label()
         Me.L_Count_Files = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.L_Interval = New System.Windows.Forms.Label()
+        Me.L_Petle = New System.Windows.Forms.Label()
+        Me.L_Przetworzone_Pliki = New System.Windows.Forms.Label()
         Me.Btn_Save = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer_PIC = New System.Windows.Forms.Timer(Me.components)
@@ -215,9 +215,9 @@ Partial Class Form_Main
         Me.GroupBox1.Controls.Add(Me.L_Current_Interval)
         Me.GroupBox1.Controls.Add(Me.L_Count_Loops)
         Me.GroupBox1.Controls.Add(Me.L_Count_Files)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.L_Interval)
+        Me.GroupBox1.Controls.Add(Me.L_Petle)
+        Me.GroupBox1.Controls.Add(Me.L_Przetworzone_Pliki)
         Me.GroupBox1.Controls.Add(Me.Btn_Save)
         Me.GroupBox1.Controls.Add(Me.Btn_Start)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
@@ -312,35 +312,35 @@ Partial Class Form_Main
         Me.L_Count_Files.TabIndex = 27
         Me.L_Count_Files.Text = "0"
         '
-        'Label3
+        'L_Interval
         '
-        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(302, 73)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 15)
-        Me.Label3.TabIndex = 26
-        Me.Label3.Text = "Interval"
+        Me.L_Interval.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.L_Interval.ForeColor = System.Drawing.Color.DimGray
+        Me.L_Interval.Location = New System.Drawing.Point(302, 73)
+        Me.L_Interval.Name = "L_Interval"
+        Me.L_Interval.Size = New System.Drawing.Size(52, 15)
+        Me.L_Interval.TabIndex = 26
+        Me.L_Interval.Text = "Interval"
         '
-        'Label2
+        'L_Petle
         '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.ForeColor = System.Drawing.Color.DimGray
-        Me.Label2.Location = New System.Drawing.Point(185, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 15)
-        Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Loops"
+        Me.L_Petle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.L_Petle.ForeColor = System.Drawing.Color.DimGray
+        Me.L_Petle.Location = New System.Drawing.Point(185, 73)
+        Me.L_Petle.Name = "L_Petle"
+        Me.L_Petle.Size = New System.Drawing.Size(39, 15)
+        Me.L_Petle.TabIndex = 25
+        Me.L_Petle.Text = "Loops"
         '
-        'Label1
+        'L_Przetworzone_Pliki
         '
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.ForeColor = System.Drawing.Color.DimGray
-        Me.Label1.Location = New System.Drawing.Point(39, 73)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 15)
-        Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Processed files"
+        Me.L_Przetworzone_Pliki.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.L_Przetworzone_Pliki.ForeColor = System.Drawing.Color.DimGray
+        Me.L_Przetworzone_Pliki.Location = New System.Drawing.Point(39, 73)
+        Me.L_Przetworzone_Pliki.Name = "L_Przetworzone_Pliki"
+        Me.L_Przetworzone_Pliki.Size = New System.Drawing.Size(83, 15)
+        Me.L_Przetworzone_Pliki.TabIndex = 24
+        Me.L_Przetworzone_Pliki.Text = "Processed files"
         '
         'Btn_Save
         '
@@ -432,7 +432,7 @@ Partial Class Form_Main
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "Form_Main"
-        Me.Text = "PDF ---> FTP 1.0.6"
+        Me.Text = "PDF ---> FTP 1.0.8"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
@@ -483,9 +483,9 @@ Partial Class Form_Main
     Friend WithEvents L_Current_Interval As Label
     Friend WithEvents L_Count_Loops As Label
     Friend WithEvents L_Count_Files As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents L_Interval As Label
+    Friend WithEvents L_Petle As Label
+    Friend WithEvents L_Przetworzone_Pliki As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents ToolStripHide As ToolStripStatusLabel
     Friend WithEvents ToolStripDisableRefreshing As ToolStripStatusLabel

@@ -124,9 +124,10 @@
 
    You should have received a copy of the GNU General Public License along with this program.  If not, see &lt;&lt;http://www.gnu.org/licenses/&gt;&gt;
 
-   Program is using iTEXT library avaible  on website: https://itextpdf.com, https://itextpdf.com/en/how-buy/agpl-license on AGPL licence. Terms of use iTEXT library you can find here: http://itextpdf.com/terms-of-use
+   Program is using iTEXT library avaible  on the website: https://itextpdf.com, https://itextpdf.com/en/how-buy/agpl-license on AGPL licence. Terms of use iTEXT library you can find here: http://itextpdf.com/terms-of-use
 
-   Program is using AutoUpdater.NET library avaible on website: https://github.com/ravibpatel/AutoUpdater.NET</value>
+   Program is using AutoUpdater.NET library avaible on the website: https://github.com/ravibpatel/AutoUpdater.NET
+   Source code is avaible on the website: https://github.com/excelsolutions/PDF-to-FTP</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -18,6 +18,7 @@
 'Kod źródłowy dostępny pod adresem: https://github.com/excelsolutions/PDF-to-FTP
 'Lista zmian:
 '2020-05-25 Dodano obsługę numeracji wz o tym samym numerze. 
+'1.0.8, 2020-11-04 Do funkcji sprawdzającej poprawność pliku: FilenameIsOK, dodano opcję aby jednak generowało plik ale z nazwą ustaloną w zmiennej: Nazwa_Pliku_Blednego
 
 Imports iTextSharp.text.pdf
 Imports iTextSharp.text
@@ -378,6 +379,8 @@ Module Module1
         Dim Znaleziono_Nr As Boolean = False
         Dim Licznik As Integer = 0
         Dim Numer As Integer = 1
+        Dim Licznik_Blednych As Integer = 0
+        Dim Nazwa_Pliku_Blednego As String = "Nierozpoznany_"
         'TODO: A co z plikami i DUBLAMI WZ???? Jeśli mamy dubel WZ to pliki beda mialy taka sama nazwe!
         'Jeżeli w ustawieniach wpiszemy jako startowy ciag- 0 to wywala że nie rozpoznano struktury pliku- NAPRAWIONE
         For Each Plik As String In My.Computer.FileSystem.GetFiles(Folder_PDF) 'Sprawdź każdy plik w folderze
@@ -390,12 +393,11 @@ Module Module1
                 Wiersz(1) = System.IO.Path.GetFileName(Plik) 'lub bez rozszerzenia: System.IO.Path.GetFileNameWithoutExtension
                 Referencja = Wytnij_String(Tresc_Pliku) 'Wycina fragment pliku wg. ustawien Mid(Tresc_Pliku, 5, 9) 'TO PODMIENIC!
                 If Referencja <> "" Then
-
-                    Wiersz(3) = Prefix & "_" & Numer & "_" & Referencja & Suffix & ".pdf" 'Nazwa pliku
+                    Wiersz(3) = Napraw_String(Prefix & "_" & Numer & "_" & Referencja & Suffix & ".pdf") 'Nazwa pliku
                     Do While Czy_WZ_Jest_Dublem(3, Wiersz(3)) = True
                         '2020-05-25 Dodano Numer- czyli numeracje kolejnych plików w przypadku, gdy plików z ttym samym nr przesyłki jest wiecej
                         Numer = Numer + 1
-                        Wiersz(3) = Prefix & "_" & Numer & "_" & Referencja & Suffix & ".pdf" 'Nazwa pliku
+                        Wiersz(3) = Napraw_String(Prefix & "_" & Numer & "_" & Referencja & Suffix & ".pdf") 'Nazwa pliku
                     Loop
                     Znaleziono_Nr = True
                 Else
@@ -403,12 +405,12 @@ Module Module1
                     Wiersz(3) = Referencja 'Nazwa pliku
                     Znaleziono_Nr = False
                 End If
-                Wiersz(2) = Referencja
+                Wiersz(2) = Napraw_String(Referencja)
 
                 Tresc_Pliku = ParsePdfText2(Plik, False) 'celowo wywołuje funkcję ponownie aby tym razem zaczytała plik wg ustawień a nie całość
                 If Allow_Duplicates = 1 Or Czy_WZ_Jest_Dublem(2, Wiersz(2)) = False Then 'jeśli pozwalamy na duplikat to idź dalej nawet jeśli funkcja CZY znajdzie duplikat
 
-#Region "Wysyłka na FTP"
+#Region "Wysyłka na FTP"' wysyłka na FTp nie zawiera chyba tych rozbudowanych zmian, które sa obecne w zapisie plików!
                     If Wysyłka_Na_FTP = True And Stan_FTP = True Then 'jesli właczylismy wysłanie na FTP  to procesuj dalej
                         ' If Not File.Exists(Sciezka_FTP & Wiersz(3)) Then
                         Dim remoteLOC As String = Folder_FTP & Wiersz(3) 'nazwa ftp plus nazwa pliku
@@ -512,6 +514,7 @@ Module Module1
                             End If
                             If System.IO.Path.GetFileName(Plik) <> Wiersz(3) Then 'jeśli nazwa już jest ok, nie procesuj dalej
                                 'XXXXXXXXXXXXXXXXX TU DAC ZABEZPIECZNEI SUME KONTROLNA
+
                                 If Sprawdz_PDF(Plik, Znaleziono_Nr) = True And FilenameIsOK(Wiersz(3)) Then 'zabezpieczenie, czy plik pdf na pewno ma taki sam poczatek (WZ) i ma szukany numer
                                     'NOWY ALGORYTM
                                     If Strony_Pliku.Length = 1 And Strony_Pliku(0) = 0 Then 'to oznacza ściśle,ze program nie znalazł żadnych pasujących stron
@@ -532,6 +535,9 @@ Module Module1
                                                     If Group_Pages = 1 Then
                                                         If FilenameIsOK(Folder_PDF) Then
                                                             Extract_Specific_Pages(Plik, Folder_PDF & Wiersz(3), Strony_Pliku) 'Zapisz nowy plik z odpowiednimi stronami
+                                                        Else 'Zmiana 1.0.8 jeśli nazwa pliku jest niepoprawna to mimo wszystko zapisz plik PDF ale ze specjalna nazwa!
+                                                            Licznik_Blednych = Licznik_Blednych + 1 'Nazwa_Pliku_Blednego & Licznik_Blednych
+                                                            Extract_Specific_Pages(Plik, Nazwa_Pliku_Blednego & Licznik_Blednych, Strony_Pliku)
                                                         End If
                                                         'dla stron, które nie mają być zgrupowane
                                                     ElseIf Group_Pages = 0 Then
@@ -553,6 +559,9 @@ Module Module1
                                                                     Strona(Stron_Ilosc) = pageNumber
                                                                     If FilenameIsOK(Referencja) Then
                                                                         Extract_Specific_Pages(Plik, Folder_PDF & Referencja & ".pdf", Strona) 'Zapisz nowy plik ze stronami, które są już sparowane
+                                                                    Else 'Zmiana 1.0.8 jeśli nazwa pliku jest niepoprawna to mimo wszystko zapisz plik PDF ale ze specjalna nazwa!
+                                                                        Licznik_Blednych = Licznik_Blednych + 1 'Nazwa_Pliku_Blednego & Licznik_Blednych
+                                                                        Extract_Specific_Pages(Plik, Folder_PDF & Nazwa_Pliku_Blednego & Licznik_Blednych & ".pdf", Strona)
                                                                     End If
 
                                                                 Else
@@ -561,8 +570,11 @@ Module Module1
                                                                     Strona(Stron_Ilosc) = pageNumber
                                                                     If FilenameIsOK(Referencja) Then
                                                                         Extract_Specific_Pages(Plik, Folder_PDF & Referencja & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
+                                                                    Else 'Zmiana 1.0.8 jeśli nazwa pliku jest niepoprawna to mimo wszystko zapisz plik PDF ale ze specjalna nazwa!
+                                                                        Licznik_Blednych = Licznik_Blednych + 1 'Nazwa_Pliku_Blednego & Licznik_Blednych
+                                                                        Extract_Specific_Pages(Plik, Folder_PDF & Nazwa_Pliku_Blednego & Licznik_Blednych & ".pdf", Strona)
                                                                     End If
-                                                                    Extract_Specific_Pages(Plik, Folder_PDF & Referencja & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
+                                                                    'Extract_Specific_Pages(Plik, Folder_PDF & Referencja & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
                                                                 End If
                                                             Else 'jak będzie tylko 1 strona to od razu ja zapisz
                                                                 ReDim Strona(0) 'zerowanie zmiennej
@@ -570,6 +582,9 @@ Module Module1
                                                                 Strona(Stron_Ilosc) = pageNumber
                                                                 If FilenameIsOK(Referencja) Then
                                                                     Extract_Specific_Pages(Plik, Folder_PDF & Referencja & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
+                                                                Else 'Zmiana 1.0.8 jeśli nazwa pliku jest niepoprawna to mimo wszystko zapisz plik PDF ale ze specjalna nazwa!
+                                                                    Licznik_Blednych = Licznik_Blednych + 1 'Nazwa_Pliku_Blednego & Licznik_Blednych
+                                                                    Extract_Specific_Pages(Plik, Folder_PDF & Nazwa_Pliku_Blednego & Licznik_Blednych & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
                                                                 End If
 
                                                             End If
@@ -636,6 +651,9 @@ Module Module1
                                                                     Strona(Stron_Ilosc) = pageNumber
                                                                     If FilenameIsOK(Referencja) Then
                                                                         Extract_Specific_Pages(Plik, Folder_Dest & Referencja & ".pdf", Strona) 'Zapisz nowy plik ze stronami, które są już sparowane
+                                                                    Else 'Zmiana 1.0.8 jeśli nazwa pliku jest niepoprawna to mimo wszystko zapisz plik PDF ale ze specjalna nazwa!
+                                                                        Licznik_Blednych = Licznik_Blednych + 1
+                                                                        Extract_Specific_Pages(Plik, Folder_Dest & Nazwa_Pliku_Blednego & Licznik_Blednych & ".pdf", Strona) 'Zapisz nowy plik ze stronami, które są już sparowane
                                                                     End If
 
                                                                 Else
@@ -644,6 +662,9 @@ Module Module1
                                                                     Strona(Stron_Ilosc) = pageNumber
                                                                     If FilenameIsOK(Referencja) Then
                                                                         Extract_Specific_Pages(Plik, Folder_Dest & Referencja & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
+                                                                    Else 'Zmiana 1.0.8 jeśli nazwa pliku jest niepoprawna to mimo wszystko zapisz plik PDF ale ze specjalna nazwa!
+                                                                        Licznik_Blednych = Licznik_Blednych + 1
+                                                                        Extract_Specific_Pages(Plik, Folder_Dest & Nazwa_Pliku_Blednego & Licznik_Blednych & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
                                                                     End If
 
                                                                 End If
@@ -653,6 +674,9 @@ Module Module1
                                                                 Strona(Stron_Ilosc) = pageNumber
                                                                 If FilenameIsOK(Referencja) Then
                                                                     Extract_Specific_Pages(Plik, Folder_Dest & Referencja & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
+                                                                Else 'Zmiana 1.0.8 jeśli nazwa pliku jest niepoprawna to mimo wszystko zapisz plik PDF ale ze specjalna nazwa!
+                                                                    Licznik_Blednych = Licznik_Blednych + 1 'Nazwa_Pliku_Blednego & Licznik_Blednych
+                                                                    Extract_Specific_Pages(Plik, Folder_Dest & Nazwa_Pliku_Blednego & Licznik_Blednych & ".pdf", Strona) 'Zapisz nowy plik jedną stroną
                                                                 End If
 
                                                             End If
@@ -933,6 +957,8 @@ Module Module1
             Czy_WZ_Jest_Dublem = False
         End If
     End Function
+
+
     Public Function Sprawdz_PDF(Sciezka_Do_Pliku As String, Znaleziono_Nr As Boolean) As Boolean
         If Checking_File = True Then
             Dim Text As String = ParsePdfText2(Sciezka_Do_Pliku, True)
@@ -1002,7 +1028,16 @@ Module Module1
         End If
 
     End Function
-
+    Public Function Napraw_String(Tresc As String)
+        Dim Poprawiany_String As String = Tresc
+        Poprawiany_String = Replace(Poprawiany_String, vbLf, "")
+        Poprawiany_String = Replace(Poprawiany_String, vbCr, "")
+        Poprawiany_String = Replace(Poprawiany_String, vbCrLf, "")
+        Poprawiany_String = Replace(Poprawiany_String, vbFormFeed, "")
+        Poprawiany_String = Replace(Poprawiany_String, vbNewLine, "")
+        Poprawiany_String = Replace(Poprawiany_String, vbTab, "")
+        Napraw_String = Poprawiany_String
+    End Function
     Function IsFileOpen(ByVal file As FileInfo) As Boolean
         Dim stream As FileStream = Nothing
         IsFileOpen = False

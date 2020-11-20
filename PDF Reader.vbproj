@@ -160,6 +160,7 @@
     <Compile Include="Module1.vb" />
     <Compile Include="Module_Dodatkowe.vb" />
     <Compile Include="Module_INI.vb" />
+    <Compile Include="Module_Tlumaczenia.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

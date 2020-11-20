@@ -115,7 +115,7 @@ Public Class Form_Ustawienia
         End If
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles L_Start_Position.Click
 
 
 
@@ -696,7 +696,7 @@ Public Class Form_Ustawienia
             My.Forms.Form_Ustawienia.R_Pages.Visible = False
             My.Forms.Form_Ustawienia.L_Pic_Half_PDF.Visible = False
             My.Forms.Form_Ustawienia.L_Pic_Pages.Visible = False
-            My.Forms.Form_Ustawienia.l_Page_Settings_Opis.Visible = True
+            My.Forms.Form_Ustawienia.L_Page_Settings_Opis.Visible = True
         Else
             L_Pick_Process_File.BackColor = Color.Red
             My.Forms.Form_Ustawienia.SplitC.Visible = True
@@ -704,7 +704,7 @@ Public Class Form_Ustawienia
             My.Forms.Form_Ustawienia.R_Pages.Visible = True
             My.Forms.Form_Ustawienia.L_Pic_Half_PDF.Visible = True
             My.Forms.Form_Ustawienia.L_Pic_Pages.Visible = True
-            My.Forms.Form_Ustawienia.l_Page_Settings_Opis.Visible = False
+            My.Forms.Form_Ustawienia.L_Page_Settings_Opis.Visible = False
         End If
 
         Kontrolka = L_Pick_Process_File
@@ -832,16 +832,274 @@ Public Class Form_Ustawienia
         Timer_Pic.Enabled = True
     End Sub
 
-    Private Sub L_Pic_Check_Click(sender As Object, e As EventArgs) Handles L_Pic_Check.Click
+
+
+    Private Sub R_Polski_CheckedChanged_1(sender As Object, e As EventArgs) Handles R_Polski.CheckedChanged
+        Timer_Pic.Enabled = False
+        Kontrolka.BackColor = Kolor_Kontrolki
+        If R_Polski.Checked = True Then
+            L_Pic_Polski.BackColor = Color.Lime
+        Else
+            L_Pic_Polski.BackColor = Color.Red
+        End If
+
+        Kontrolka = L_Pic_Polski
+        Kolor_Kontrolki = L_Pic_Polski.BackColor
+        Timer_Pic.Enabled = True
+        Wersja_PL()
+    End Sub
+
+    Private Sub R_English_CheckedChanged(sender As Object, e As EventArgs) Handles R_English.CheckedChanged
+        Timer_Pic.Enabled = False
+        Kontrolka.BackColor = Kolor_Kontrolki
+        If R_English.Checked = True Then
+            L_Pick_English.BackColor = Color.Lime
+        Else
+            L_Pick_English.BackColor = Color.Red
+        End If
+
+        Kontrolka = L_Pick_English
+        Kolor_Kontrolki = L_Pick_English.BackColor
+        Timer_Pic.Enabled = True
+    End Sub
+
+    Private Sub R_Polski_MouseHover(sender As Object, e As EventArgs) Handles R_Polski.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(R_Polski, "Zmień język na Polski")
+            Case "en"
+        End Select
+
+
+
+
+
+
 
     End Sub
 
-    Private Sub Group_FTP_Enter(sender As Object, e As EventArgs) Handles Group_FTP.Enter
-
+    Private Sub L_Pic_Polski_Click(sender As Object, e As EventArgs) Handles L_Pic_Polski.Click
 
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub L_Pic_Polski_MouseHover(sender As Object, e As EventArgs) Handles L_Pic_Polski.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pic_Polski, "Zmień język na Polski")
+            Case "en"
+        End Select
+    End Sub
 
+    Private Sub R_English_MouseHover(sender As Object, e As EventArgs) Handles R_English.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(R_English, "Zmień na język angielski")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pick_English_Click(sender As Object, e As EventArgs) Handles L_Pick_English.Click
+
+    End Sub
+
+    Private Sub L_Pick_English_MouseHover(sender As Object, e As EventArgs) Handles L_Pick_English.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pick_English, "Zmień na język angielski")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub Check_Duplicates_MouseHover(sender As Object, e As EventArgs) Handles Check_Duplicates.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(Check_Duplicates, "Włączenie opcji pozwala na tworzenie kilku osobnych plików do tej samej przesyłki. Np. z różnymi WZ'tkami." & vbLf &
+                    "Wszystkie pliki z tym samym numerem zostaną zapisane jako osobne pliki wraz z numeracją. " & vbLf & vbLf &
+                " Wyłączenie tej opcji spowoduje pokazanie się błedu w przypadku, gdy pojawi się więcej plików z tym samym, rozpoznanym numerem. ")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub Check_Rename_MouseHover(sender As Object, e As EventArgs) Handles Check_Rename.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(Check_Rename, "Włączenie opcji Pracuj na kopiach spowoduje tworzenie plików w nowej, 
+                wybranej lokalizacji zamiast nadpisywania istniejących")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_PIC_Rename_Click(sender As Object, e As EventArgs) Handles L_PIC_Rename.Click
+
+    End Sub
+
+    Private Sub L_PIC_Rename_MouseHover(sender As Object, e As EventArgs) Handles L_PIC_Rename.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_PIC_Rename, "Włączenie opcji Pracuj na kopiach spowoduje tworzenie plików w nowej, 
+                wybranej lokalizacji zamiast nadpisywania istniejących")
+            Case "en"
+        End Select
+
+    End Sub
+
+    Private Sub Check_Check_MouseHover(sender As Object, e As EventArgs) Handles Check_Check.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(Check_Check, "Włączona opcja to dodatkowe sprawdzanie pliku PDF. Jeśli w danym pliku algorytm
+                nie znajdzie wybranego ciągu znaków, nie przetworzy go. ")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pic_Check_MouseHover(sender As Object, e As EventArgs) Handles L_Pic_Check.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pic_Check, "Włączona opcja to dodatkowe sprawdzanie pliku PDF. Jeśli w danym pliku algorytm
+                nie znajdzie wybranego ciągu znaków, nie przetworzy go. ")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub CheckAutomatyzacja_MouseHover(sender As Object, e As EventArgs) Handles CheckAutomatyzacja.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(CheckAutomatyzacja, "Włączenie automatycznego przetwarzania plików bez konieczności manualnej pracy użytkownika. ")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_PIC_Auto_Click(sender As Object, e As EventArgs) Handles L_PIC_Auto.Click
+
+    End Sub
+
+    Private Sub L_PIC_Auto_MouseHover(sender As Object, e As EventArgs) Handles L_PIC_Auto.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_PIC_Auto, "Włączenie automatycznego przetwarzania plików bez konieczności manualnej pracy użytkownika. ")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub Check_Process_File_MouseHover(sender As Object, e As EventArgs) Handles Check_Process_File.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(Check_Process_File, "Procesuj całe pliki bez dzielenia. Wynikiem operacji będzie zawsze jeden plik. 
+                Jeśli wyłączymy tą opcję program będzie dzielić plik PDF na strony według zadanych ustawień.")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pic_Half_PDF_MouseHover(sender As Object, e As EventArgs) Handles L_Pic_Half_PDF.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pic_Half_PDF, "Wynikiem działania programu będzie wybrana połowa pliku PDF")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pick_Process_File_Click(sender As Object, e As EventArgs) Handles L_Pick_Process_File.Click
+
+    End Sub
+
+    Private Sub L_Pick_Process_File_MouseHover(sender As Object, e As EventArgs) Handles L_Pick_Process_File.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pick_Process_File, "Procesuj całe pliki bez dzielenia. Wynikiem operacji będzie zawsze jeden plik. 
+                Jeśli wyłączymy tą opcję program będzie dzielić plik PDF na strony według zadanych ustawień.")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub R_Half_PDF_MouseHover(sender As Object, e As EventArgs) Handles R_Half_PDF.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(R_Half_PDF, "Wynikiem działania programu będzie wybrana połowa pliku PDF")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub R_Pages_MouseHover(sender As Object, e As EventArgs) Handles R_Pages.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(R_Pages, "Wynikiem działania programu będzią tylko te strony z pliku PDF, które zawieraja lub niezawierają wskazany ciąg znaków")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pic_Pages_MouseHover(sender As Object, e As EventArgs) Handles L_Pic_Pages.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pic_Pages, "Wynikiem działania programu będzą tylko te strony z pliku PDF, które zawieraja lub niezawierają wskazany ciąg znaków")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Polowa1_MouseHover(sender As Object, e As EventArgs) Handles L_Polowa1.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Polowa1, "Wynikiem działania programu będzie pierwsza połowa pliku PDF")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Polowa2_MouseHover(sender As Object, e As EventArgs) Handles L_Polowa2.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Polowa1, "Wynikiem działania programu będzie druga połowa pliku PDF")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub R_Contain_MouseHover(sender As Object, e As EventArgs) Handles R_Contain.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(R_Contain, "Wynikiem działania programu będzą tylko te strony z pliku PDF, które zawieraja wskazany ciąg znaków")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pic_Contain_MouseHover(sender As Object, e As EventArgs) Handles L_Pic_Contain.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pic_Contain, "Wynikiem działania programu będzą tylko te strony z pliku PDF, które zawieraja wskazany ciąg znaków")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub R_Not_Contain_MouseHover(sender As Object, e As EventArgs) Handles R_Not_Contain.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(R_Not_Contain, "Wynikiem działania programu będzą tylko te strony z pliku PDF, które nie zawieraja wskazany ciąg znaków")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pic_Not_Contain_MouseHover(sender As Object, e As EventArgs) Handles L_Pic_Not_Contain.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pic_Not_Contain, "Wynikiem działania programu będzą tylko te strony z pliku PDF, które nie zawieraja wskazany ciąg znaków")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub C_Group_Pages_MouseHover(sender As Object, e As EventArgs) Handles C_Group_Pages.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(C_Group_Pages, "Włączenie tej opcji spowoduje grupowanie stron zawierających lub niezawierających wybrany ciąg znaków w jeden plik. Wyłączona opcja spwooduje, że każda strona zostanie zapisana jako osobny plik pdf")
+            Case "en"
+        End Select
+    End Sub
+
+    Private Sub L_Pic_Group_Pages_Click(sender As Object, e As EventArgs) Handles L_Pic_Group_Pages.Click
+
+    End Sub
+
+    Private Sub L_Pic_Group_Pages_MouseHover(sender As Object, e As EventArgs) Handles L_Pic_Group_Pages.MouseHover
+        Select Case Jezyk
+            Case "pl"
+                ToolTip1.SetToolTip(L_Pic_Group_Pages, "Włączenie tej opcji spowoduje grupowanie stron zawierających lub niezawierających wybrany ciąg znaków w jeden plik. Wyłączona opcja spwooduje, że każda strona zostanie zapisana jako osobny plik pdf")
+            Case "en"
+        End Select
     End Sub
 End Class

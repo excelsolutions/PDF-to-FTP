@@ -31,11 +31,11 @@ Partial Class Form_Ustawienia
         Me.L_PIC_FTP = New System.Windows.Forms.Label()
         Me.Check_FTP = New System.Windows.Forms.CheckBox()
         Me.Pic_FTP = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.L_Haslo = New System.Windows.Forms.Label()
         Me.T_Sciezka_FTP = New System.Windows.Forms.TextBox()
         Me.T_Haslo = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.L_Adres = New System.Windows.Forms.Label()
+        Me.L_Login = New System.Windows.Forms.Label()
         Me.T_Login = New System.Windows.Forms.TextBox()
         Me.Btn_Zapisz = New System.Windows.Forms.Button()
         Me.Btn_Anuluj = New System.Windows.Forms.Button()
@@ -49,7 +49,7 @@ Partial Class Form_Ustawienia
         Me.Pic_Destination = New System.Windows.Forms.PictureBox()
         Me.Check_Rename = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Group_FileName = New System.Windows.Forms.GroupBox()
         Me.L_Pic_Duplicates = New System.Windows.Forms.Label()
         Me.Check_Duplicates = New System.Windows.Forms.CheckBox()
         Me.L_Wybierz_Przyklad = New System.Windows.Forms.Label()
@@ -59,14 +59,14 @@ Partial Class Form_Ustawienia
         Me.T_Suffix = New System.Windows.Forms.TextBox()
         Me.Num_Dlugosc = New System.Windows.Forms.NumericUpDown()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.L_New_File_Name = New System.Windows.Forms.Label()
         Me.T_Przykladowa_Nazwa = New System.Windows.Forms.TextBox()
         Me.T_Prefix = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.L_Number_Chars = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Btn_Wybierz_Z_Zaznaczenia = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.L_Specified_Text = New System.Windows.Forms.Label()
+        Me.L_Start_Position = New System.Windows.Forms.Label()
         Me.Num_Start = New System.Windows.Forms.NumericUpDown()
         Me.Pic_Wybierz_Przyklad = New System.Windows.Forms.PictureBox()
         Me.R_Podglad = New System.Windows.Forms.RichTextBox()
@@ -77,40 +77,40 @@ Partial Class Form_Ustawienia
         Me.L_Pozycja_Karety1 = New System.Windows.Forms.Label()
         Me.Btn_Wybierz_Z_Zaznaczenia1 = New System.Windows.Forms.Button()
         Me.L_Opis_Careta1 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Group_Control_String = New System.Windows.Forms.GroupBox()
         Me.Pic_Sec = New System.Windows.Forms.PictureBox()
         Me.T_Control_String = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Group_Pozycja_Control_Stringu = New System.Windows.Forms.GroupBox()
         Me.L_Pic_Check = New System.Windows.Forms.Label()
         Me.Check_Check = New System.Windows.Forms.CheckBox()
         Me.Pic1 = New System.Windows.Forms.PictureBox()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.L_Specified_Text1 = New System.Windows.Forms.Label()
         Me.Num_Start1 = New System.Windows.Forms.NumericUpDown()
         Me.T_Klucz1 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.L_Start_Position1 = New System.Windows.Forms.Label()
         Me.Num_Dlugosc1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.L_Number_Chars1 = New System.Windows.Forms.Label()
         Me.Pic_Wybierz_Przyklad1 = New System.Windows.Forms.PictureBox()
         Me.R_Podglad1 = New System.Windows.Forms.RichTextBox()
         Me.L_Wybierz_Przyklad1 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Group_Typ_Automatyzacji = New System.Windows.Forms.GroupBox()
         Me.L_PIC_Auto = New System.Windows.Forms.Label()
         Me.L_PIC_Save = New System.Windows.Forms.Label()
         Me.L_PIC_Send = New System.Windows.Forms.Label()
         Me.R_Send = New System.Windows.Forms.RadioButton()
         Me.R_Save = New System.Windows.Forms.RadioButton()
         Me.CheckAutomatyzacja = New System.Windows.Forms.CheckBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Group_Statystyka = New System.Windows.Forms.GroupBox()
+        Me.L_Start = New System.Windows.Forms.Label()
         Me.T_Liczba_Bledow = New System.Windows.Forms.TextBox()
         Me.T_Czas_Startu_Automatu = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.L_Liczba_Bledow = New System.Windows.Forms.Label()
+        Me.L_Liczba_Cykli = New System.Windows.Forms.Label()
         Me.T_Liczba_Zmienionych_Plikow = New System.Windows.Forms.TextBox()
         Me.T_Liczba_Cykli = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.L_Liczba_Zapisanych_Plikow = New System.Windows.Forms.Label()
+        Me.Group_Interval = New System.Windows.Forms.GroupBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.T_Interwal = New System.Windows.Forms.TextBox()
         Me.Num_Sekundy = New System.Windows.Forms.NumericUpDown()
@@ -119,7 +119,7 @@ Partial Class Form_Ustawienia
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.l_Page_Settings_Opis = New System.Windows.Forms.Label()
+        Me.L_Page_Settings_Opis = New System.Windows.Forms.Label()
         Me.R_Half_PDF = New System.Windows.Forms.RadioButton()
         Me.R_Pages = New System.Windows.Forms.RadioButton()
         Me.Check_Process_File = New System.Windows.Forms.CheckBox()
@@ -131,13 +131,19 @@ Partial Class Form_Ustawienia
         Me.L_Pic_Group_Pages = New System.Windows.Forms.Label()
         Me.R_Not_Contain = New System.Windows.Forms.RadioButton()
         Me.R_Contain = New System.Windows.Forms.RadioButton()
-        Me.Label22 = New System.Windows.Forms.Label()
+        Me.L_Text_ToFind = New System.Windows.Forms.Label()
         Me.L_Przyklad = New System.Windows.Forms.Label()
         Me.T_Tekst_Na_Stronach = New System.Windows.Forms.TextBox()
         Me.L_Pic_Not_Contain = New System.Windows.Forms.Label()
         Me.L_Pic_Contain = New System.Windows.Forms.Label()
         Me.L_Pic_Pages = New System.Windows.Forms.Label()
         Me.L_Pic_Half_PDF = New System.Windows.Forms.Label()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Group_Jezyk = New System.Windows.Forms.GroupBox()
+        Me.R_Polski = New System.Windows.Forms.RadioButton()
+        Me.L_Pic_Polski = New System.Windows.Forms.Label()
+        Me.L_Pick_English = New System.Windows.Forms.Label()
+        Me.R_English = New System.Windows.Forms.RadioButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer_Pic = New System.Windows.Forms.Timer(Me.components)
         Me.Group_PDF.SuspendLayout()
@@ -149,24 +155,24 @@ Partial Class Form_Ustawienia
         Me.Group_Destination.SuspendLayout()
         CType(Me.Pic_Destination, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.Group_FileName.SuspendLayout()
         CType(Me.Pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Num_Dlugosc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Num_Start, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_Wybierz_Przyklad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        Me.Group_Control_String.SuspendLayout()
         CType(Me.Pic_Sec, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
+        Me.Group_Pozycja_Control_Stringu.SuspendLayout()
         CType(Me.Pic1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Num_Start1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Num_Dlugosc1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_Wybierz_Przyklad1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
+        Me.Group_Typ_Automatyzacji.SuspendLayout()
+        Me.Group_Statystyka.SuspendLayout()
+        Me.Group_Interval.SuspendLayout()
         CType(Me.Num_Sekundy, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Num_Minuty, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage5.SuspendLayout()
@@ -174,6 +180,8 @@ Partial Class Form_Ustawienia
         Me.SplitC.Panel1.SuspendLayout()
         Me.SplitC.Panel2.SuspendLayout()
         Me.SplitC.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
+        Me.Group_Jezyk.SuspendLayout()
         Me.SuspendLayout()
         '
         'Group_PDF
@@ -211,11 +219,11 @@ Partial Class Form_Ustawienia
         Me.Group_FTP.Controls.Add(Me.L_PIC_FTP)
         Me.Group_FTP.Controls.Add(Me.Check_FTP)
         Me.Group_FTP.Controls.Add(Me.Pic_FTP)
-        Me.Group_FTP.Controls.Add(Me.Label4)
+        Me.Group_FTP.Controls.Add(Me.L_Haslo)
         Me.Group_FTP.Controls.Add(Me.T_Sciezka_FTP)
         Me.Group_FTP.Controls.Add(Me.T_Haslo)
-        Me.Group_FTP.Controls.Add(Me.Label1)
-        Me.Group_FTP.Controls.Add(Me.Label3)
+        Me.Group_FTP.Controls.Add(Me.L_Adres)
+        Me.Group_FTP.Controls.Add(Me.L_Login)
         Me.Group_FTP.Controls.Add(Me.T_Login)
         Me.Group_FTP.Location = New System.Drawing.Point(3, 198)
         Me.Group_FTP.Name = "Group_FTP"
@@ -255,14 +263,14 @@ Partial Class Form_Ustawienia
         Me.Pic_FTP.TabIndex = 7
         Me.Pic_FTP.TabStop = False
         '
-        'Label4
+        'L_Haslo
         '
-        Me.Label4.Location = New System.Drawing.Point(245, 83)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(140, 18)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Password"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Haslo.Location = New System.Drawing.Point(245, 83)
+        Me.L_Haslo.Name = "L_Haslo"
+        Me.L_Haslo.Size = New System.Drawing.Size(140, 18)
+        Me.L_Haslo.TabIndex = 11
+        Me.L_Haslo.Text = "Password"
+        Me.L_Haslo.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'T_Sciezka_FTP
         '
@@ -279,23 +287,23 @@ Partial Class Form_Ustawienia
         Me.T_Haslo.Size = New System.Drawing.Size(214, 20)
         Me.T_Haslo.TabIndex = 10
         '
-        'Label1
+        'L_Adres
         '
-        Me.Label1.Location = New System.Drawing.Point(6, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 18)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Address"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Adres.Location = New System.Drawing.Point(6, 16)
+        Me.L_Adres.Name = "L_Adres"
+        Me.L_Adres.Size = New System.Drawing.Size(198, 18)
+        Me.L_Adres.TabIndex = 3
+        Me.L_Adres.Text = "Address"
+        Me.L_Adres.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'Label3
+        'L_Login
         '
-        Me.Label3.Location = New System.Drawing.Point(5, 82)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 18)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Login"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Login.Location = New System.Drawing.Point(5, 82)
+        Me.L_Login.Name = "L_Login"
+        Me.L_Login.Size = New System.Drawing.Size(108, 18)
+        Me.L_Login.TabIndex = 9
+        Me.L_Login.Text = "Login"
+        Me.L_Login.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'T_Login
         '
@@ -306,7 +314,7 @@ Partial Class Form_Ustawienia
         '
         'Btn_Zapisz
         '
-        Me.Btn_Zapisz.Location = New System.Drawing.Point(327, 403)
+        Me.Btn_Zapisz.Location = New System.Drawing.Point(346, 403)
         Me.Btn_Zapisz.Name = "Btn_Zapisz"
         Me.Btn_Zapisz.Size = New System.Drawing.Size(150, 37)
         Me.Btn_Zapisz.TabIndex = 16
@@ -316,7 +324,7 @@ Partial Class Form_Ustawienia
         'Btn_Anuluj
         '
         Me.Btn_Anuluj.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Btn_Anuluj.Location = New System.Drawing.Point(170, 403)
+        Me.Btn_Anuluj.Location = New System.Drawing.Point(189, 403)
         Me.Btn_Anuluj.Name = "Btn_Anuluj"
         Me.Btn_Anuluj.Size = New System.Drawing.Size(150, 37)
         Me.Btn_Anuluj.TabIndex = 17
@@ -334,10 +342,11 @@ Partial Class Form_Ustawienia
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(484, 397)
+        Me.TabControl1.Size = New System.Drawing.Size(508, 397)
         Me.TabControl1.TabIndex = 18
         '
         'TabPage1
@@ -350,7 +359,7 @@ Partial Class Form_Ustawienia
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(476, 371)
+        Me.TabPage1.Size = New System.Drawing.Size(500, 371)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Path settings"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -407,44 +416,44 @@ Partial Class Form_Ustawienia
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.GroupBox1)
+        Me.TabPage2.Controls.Add(Me.Group_FileName)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(476, 371)
+        Me.TabPage2.Size = New System.Drawing.Size(500, 371)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "File name settings"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'Group_FileName
         '
-        Me.GroupBox1.Controls.Add(Me.L_Pic_Duplicates)
-        Me.GroupBox1.Controls.Add(Me.Check_Duplicates)
-        Me.GroupBox1.Controls.Add(Me.L_Wybierz_Przyklad)
-        Me.GroupBox1.Controls.Add(Me.Pic)
-        Me.GroupBox1.Controls.Add(Me.L_Pozycja_Karety)
-        Me.GroupBox1.Controls.Add(Me.T_Klucz)
-        Me.GroupBox1.Controls.Add(Me.T_Suffix)
-        Me.GroupBox1.Controls.Add(Me.Num_Dlugosc)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.T_Przykladowa_Nazwa)
-        Me.GroupBox1.Controls.Add(Me.T_Prefix)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Btn_Wybierz_Z_Zaznaczenia)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Num_Start)
-        Me.GroupBox1.Controls.Add(Me.Pic_Wybierz_Przyklad)
-        Me.GroupBox1.Controls.Add(Me.R_Podglad)
-        Me.GroupBox1.Controls.Add(Me.L_Opis_Careta)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(460, 362)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Position and lenght of string to be cut"
+        Me.Group_FileName.Controls.Add(Me.L_Pic_Duplicates)
+        Me.Group_FileName.Controls.Add(Me.Check_Duplicates)
+        Me.Group_FileName.Controls.Add(Me.L_Wybierz_Przyklad)
+        Me.Group_FileName.Controls.Add(Me.Pic)
+        Me.Group_FileName.Controls.Add(Me.L_Pozycja_Karety)
+        Me.Group_FileName.Controls.Add(Me.T_Klucz)
+        Me.Group_FileName.Controls.Add(Me.T_Suffix)
+        Me.Group_FileName.Controls.Add(Me.Num_Dlugosc)
+        Me.Group_FileName.Controls.Add(Me.Label9)
+        Me.Group_FileName.Controls.Add(Me.L_New_File_Name)
+        Me.Group_FileName.Controls.Add(Me.T_Przykladowa_Nazwa)
+        Me.Group_FileName.Controls.Add(Me.T_Prefix)
+        Me.Group_FileName.Controls.Add(Me.L_Number_Chars)
+        Me.Group_FileName.Controls.Add(Me.Label8)
+        Me.Group_FileName.Controls.Add(Me.Btn_Wybierz_Z_Zaznaczenia)
+        Me.Group_FileName.Controls.Add(Me.L_Specified_Text)
+        Me.Group_FileName.Controls.Add(Me.L_Start_Position)
+        Me.Group_FileName.Controls.Add(Me.Num_Start)
+        Me.Group_FileName.Controls.Add(Me.Pic_Wybierz_Przyklad)
+        Me.Group_FileName.Controls.Add(Me.R_Podglad)
+        Me.Group_FileName.Controls.Add(Me.L_Opis_Careta)
+        Me.Group_FileName.Location = New System.Drawing.Point(13, 3)
+        Me.Group_FileName.Name = "Group_FileName"
+        Me.Group_FileName.Size = New System.Drawing.Size(460, 362)
+        Me.Group_FileName.TabIndex = 0
+        Me.Group_FileName.TabStop = False
+        Me.Group_FileName.Text = "Position and lenght of string to be cut"
         '
         'L_Pic_Duplicates
         '
@@ -473,7 +482,7 @@ Partial Class Form_Ustawienia
         Me.L_Wybierz_Przyklad.ForeColor = System.Drawing.Color.Blue
         Me.L_Wybierz_Przyklad.Location = New System.Drawing.Point(10, 185)
         Me.L_Wybierz_Przyklad.Name = "L_Wybierz_Przyklad"
-        Me.L_Wybierz_Przyklad.Size = New System.Drawing.Size(228, 18)
+        Me.L_Wybierz_Przyklad.Size = New System.Drawing.Size(219, 18)
         Me.L_Wybierz_Przyklad.TabIndex = 37
         Me.L_Wybierz_Przyklad.Text = "To see preview please load example pdf file:"
         Me.L_Wybierz_Przyklad.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -532,14 +541,14 @@ Partial Class Form_Ustawienia
         Me.Label9.Text = "Suffix:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'Label7
+        'L_New_File_Name
         '
-        Me.Label7.Location = New System.Drawing.Point(10, 113)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 18)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "New file name preview:"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_New_File_Name.Location = New System.Drawing.Point(10, 113)
+        Me.L_New_File_Name.Name = "L_New_File_Name"
+        Me.L_New_File_Name.Size = New System.Drawing.Size(125, 18)
+        Me.L_New_File_Name.TabIndex = 12
+        Me.L_New_File_Name.Text = "New file name preview:"
+        Me.L_New_File_Name.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'T_Przykladowa_Nazwa
         '
@@ -556,14 +565,14 @@ Partial Class Form_Ustawienia
         Me.T_Prefix.Size = New System.Drawing.Size(206, 20)
         Me.T_Prefix.TabIndex = 14
         '
-        'Label5
+        'L_Number_Chars
         '
-        Me.Label5.Location = New System.Drawing.Point(324, 21)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(126, 21)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Number of char. to cut:"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Number_Chars.Location = New System.Drawing.Point(324, 21)
+        Me.L_Number_Chars.Name = "L_Number_Chars"
+        Me.L_Number_Chars.Size = New System.Drawing.Size(126, 21)
+        Me.L_Number_Chars.TabIndex = 5
+        Me.L_Number_Chars.Text = "Number of char. to cut:"
+        Me.L_Number_Chars.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label8
         '
@@ -576,30 +585,30 @@ Partial Class Form_Ustawienia
         '
         'Btn_Wybierz_Z_Zaznaczenia
         '
-        Me.Btn_Wybierz_Z_Zaznaczenia.Location = New System.Drawing.Point(272, 184)
+        Me.Btn_Wybierz_Z_Zaznaczenia.Location = New System.Drawing.Point(254, 184)
         Me.Btn_Wybierz_Z_Zaznaczenia.Name = "Btn_Wybierz_Z_Zaznaczenia"
-        Me.Btn_Wybierz_Z_Zaznaczenia.Size = New System.Drawing.Size(112, 19)
+        Me.Btn_Wybierz_Z_Zaznaczenia.Size = New System.Drawing.Size(130, 19)
         Me.Btn_Wybierz_Z_Zaznaczenia.TabIndex = 10
         Me.Btn_Wybierz_Z_Zaznaczenia.Text = "Pick form selection"
         Me.Btn_Wybierz_Z_Zaznaczenia.UseVisualStyleBackColor = True
         '
-        'Label10
+        'L_Specified_Text
         '
-        Me.Label10.Location = New System.Drawing.Point(90, 24)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(228, 19)
-        Me.Label10.TabIndex = 18
-        Me.Label10.Text = "specified text to indicate beginning"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Specified_Text.Location = New System.Drawing.Point(90, 24)
+        Me.L_Specified_Text.Name = "L_Specified_Text"
+        Me.L_Specified_Text.Size = New System.Drawing.Size(228, 19)
+        Me.L_Specified_Text.TabIndex = 18
+        Me.L_Specified_Text.Text = "specified text to indicate beginning"
+        Me.L_Specified_Text.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'Label2
+        'L_Start_Position
         '
-        Me.Label2.Location = New System.Drawing.Point(10, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 18)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Start position"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Start_Position.Location = New System.Drawing.Point(10, 24)
+        Me.L_Start_Position.Name = "L_Start_Position"
+        Me.L_Start_Position.Size = New System.Drawing.Size(74, 18)
+        Me.L_Start_Position.TabIndex = 4
+        Me.L_Start_Position.Text = "Start position"
+        Me.L_Start_Position.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Num_Start
         '
@@ -615,7 +624,7 @@ Partial Class Form_Ustawienia
         '
         Me.Pic_Wybierz_Przyklad.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Pic_Wybierz_Przyklad.Image = Global.PDF_Reader.My.Resources.Resources.pdf_obrazek
-        Me.Pic_Wybierz_Przyklad.Location = New System.Drawing.Point(244, 183)
+        Me.Pic_Wybierz_Przyklad.Location = New System.Drawing.Point(227, 183)
         Me.Pic_Wybierz_Przyklad.Name = "Pic_Wybierz_Przyklad"
         Me.Pic_Wybierz_Przyklad.Size = New System.Drawing.Size(21, 20)
         Me.Pic_Wybierz_Przyklad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -657,14 +666,14 @@ Partial Class Form_Ustawienia
         Me.TabPage3.Controls.Add(Me.L_Pozycja_Karety1)
         Me.TabPage3.Controls.Add(Me.Btn_Wybierz_Z_Zaznaczenia1)
         Me.TabPage3.Controls.Add(Me.L_Opis_Careta1)
-        Me.TabPage3.Controls.Add(Me.GroupBox3)
-        Me.TabPage3.Controls.Add(Me.GroupBox2)
+        Me.TabPage3.Controls.Add(Me.Group_Control_String)
+        Me.TabPage3.Controls.Add(Me.Group_Pozycja_Control_Stringu)
         Me.TabPage3.Controls.Add(Me.Pic_Wybierz_Przyklad1)
         Me.TabPage3.Controls.Add(Me.R_Podglad1)
         Me.TabPage3.Controls.Add(Me.L_Wybierz_Przyklad1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(476, 371)
+        Me.TabPage3.Size = New System.Drawing.Size(500, 371)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Checking PDF algorythm"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -681,11 +690,11 @@ Partial Class Form_Ustawienia
         '
         'Btn_Wybierz_Z_Zaznaczenia1
         '
-        Me.Btn_Wybierz_Z_Zaznaczenia1.Location = New System.Drawing.Point(279, 168)
+        Me.Btn_Wybierz_Z_Zaznaczenia1.Location = New System.Drawing.Point(265, 168)
         Me.Btn_Wybierz_Z_Zaznaczenia1.Name = "Btn_Wybierz_Z_Zaznaczenia1"
-        Me.Btn_Wybierz_Z_Zaznaczenia1.Size = New System.Drawing.Size(112, 19)
+        Me.Btn_Wybierz_Z_Zaznaczenia1.Size = New System.Drawing.Size(126, 19)
         Me.Btn_Wybierz_Z_Zaznaczenia1.TabIndex = 32
-        Me.Btn_Wybierz_Z_Zaznaczenia1.Text = "Pick form selection"
+        Me.Btn_Wybierz_Z_Zaznaczenia1.Text = "PDF to FTP - analiza"
         Me.Btn_Wybierz_Z_Zaznaczenia1.UseVisualStyleBackColor = True
         '
         'L_Opis_Careta1
@@ -697,16 +706,16 @@ Partial Class Form_Ustawienia
         Me.L_Opis_Careta1.Text = "Caret:"
         Me.L_Opis_Careta1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'GroupBox3
+        'Group_Control_String
         '
-        Me.GroupBox3.Controls.Add(Me.Pic_Sec)
-        Me.GroupBox3.Controls.Add(Me.T_Control_String)
-        Me.GroupBox3.Location = New System.Drawing.Point(9, 106)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(456, 55)
-        Me.GroupBox3.TabIndex = 31
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Control string"
+        Me.Group_Control_String.Controls.Add(Me.Pic_Sec)
+        Me.Group_Control_String.Controls.Add(Me.T_Control_String)
+        Me.Group_Control_String.Location = New System.Drawing.Point(9, 106)
+        Me.Group_Control_String.Name = "Group_Control_String"
+        Me.Group_Control_String.Size = New System.Drawing.Size(456, 55)
+        Me.Group_Control_String.TabIndex = 31
+        Me.Group_Control_String.TabStop = False
+        Me.Group_Control_String.Text = "Control string"
         '
         'Pic_Sec
         '
@@ -726,23 +735,23 @@ Partial Class Form_Ustawienia
         Me.T_Control_String.Size = New System.Drawing.Size(412, 20)
         Me.T_Control_String.TabIndex = 28
         '
-        'GroupBox2
+        'Group_Pozycja_Control_Stringu
         '
-        Me.GroupBox2.Controls.Add(Me.L_Pic_Check)
-        Me.GroupBox2.Controls.Add(Me.Check_Check)
-        Me.GroupBox2.Controls.Add(Me.Pic1)
-        Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.Num_Start1)
-        Me.GroupBox2.Controls.Add(Me.T_Klucz1)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Num_Dlugosc1)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Location = New System.Drawing.Point(10, 3)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(456, 97)
-        Me.GroupBox2.TabIndex = 30
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Define position of the control string"
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.L_Pic_Check)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.Check_Check)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.Pic1)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.L_Specified_Text1)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.Num_Start1)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.T_Klucz1)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.L_Start_Position1)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.Num_Dlugosc1)
+        Me.Group_Pozycja_Control_Stringu.Controls.Add(Me.L_Number_Chars1)
+        Me.Group_Pozycja_Control_Stringu.Location = New System.Drawing.Point(10, 3)
+        Me.Group_Pozycja_Control_Stringu.Name = "Group_Pozycja_Control_Stringu"
+        Me.Group_Pozycja_Control_Stringu.Size = New System.Drawing.Size(456, 97)
+        Me.Group_Pozycja_Control_Stringu.TabIndex = 30
+        Me.Group_Pozycja_Control_Stringu.TabStop = False
+        Me.Group_Pozycja_Control_Stringu.Text = "Define position of the control string"
         '
         'L_Pic_Check
         '
@@ -775,14 +784,14 @@ Partial Class Form_Ustawienia
         Me.Pic1.TabIndex = 35
         Me.Pic1.TabStop = False
         '
-        'Label13
+        'L_Specified_Text1
         '
-        Me.Label13.Location = New System.Drawing.Point(89, 39)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(228, 19)
-        Me.Label13.TabIndex = 28
-        Me.Label13.Text = "specified text to indicate beginning"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Specified_Text1.Location = New System.Drawing.Point(89, 39)
+        Me.L_Specified_Text1.Name = "L_Specified_Text1"
+        Me.L_Specified_Text1.Size = New System.Drawing.Size(228, 19)
+        Me.L_Specified_Text1.TabIndex = 28
+        Me.L_Specified_Text1.Text = "specified text to indicate beginning"
+        Me.L_Specified_Text1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Num_Start1
         '
@@ -801,14 +810,14 @@ Partial Class Form_Ustawienia
         Me.T_Klucz1.Size = New System.Drawing.Size(207, 20)
         Me.T_Klucz1.TabIndex = 27
         '
-        'Label14
+        'L_Start_Position1
         '
-        Me.Label14.Location = New System.Drawing.Point(9, 39)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(74, 18)
-        Me.Label14.TabIndex = 21
-        Me.Label14.Text = "Start position"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Start_Position1.Location = New System.Drawing.Point(9, 39)
+        Me.L_Start_Position1.Name = "L_Start_Position1"
+        Me.L_Start_Position1.Size = New System.Drawing.Size(74, 18)
+        Me.L_Start_Position1.TabIndex = 21
+        Me.L_Start_Position1.Text = "Start position"
+        Me.L_Start_Position1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Num_Dlugosc1
         '
@@ -819,20 +828,20 @@ Partial Class Form_Ustawienia
         Me.Num_Dlugosc1.TabIndex = 23
         Me.Num_Dlugosc1.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
-        'Label12
+        'L_Number_Chars1
         '
-        Me.Label12.Location = New System.Drawing.Point(323, 36)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(126, 21)
-        Me.Label12.TabIndex = 22
-        Me.Label12.Text = "Number of char. to cut:"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Number_Chars1.Location = New System.Drawing.Point(323, 36)
+        Me.L_Number_Chars1.Name = "L_Number_Chars1"
+        Me.L_Number_Chars1.Size = New System.Drawing.Size(126, 21)
+        Me.L_Number_Chars1.TabIndex = 22
+        Me.L_Number_Chars1.Text = "Number of char. to cut:"
+        Me.L_Number_Chars1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Pic_Wybierz_Przyklad1
         '
         Me.Pic_Wybierz_Przyklad1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Pic_Wybierz_Przyklad1.Image = Global.PDF_Reader.My.Resources.Resources.pdf_obrazek
-        Me.Pic_Wybierz_Przyklad1.Location = New System.Drawing.Point(252, 167)
+        Me.Pic_Wybierz_Przyklad1.Location = New System.Drawing.Point(238, 167)
         Me.Pic_Wybierz_Przyklad1.Name = "Pic_Wybierz_Przyklad1"
         Me.Pic_Wybierz_Przyklad1.Size = New System.Drawing.Size(21, 20)
         Me.Pic_Wybierz_Przyklad1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -862,31 +871,31 @@ Partial Class Form_Ustawienia
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.GroupBox6)
-        Me.TabPage4.Controls.Add(Me.GroupBox5)
-        Me.TabPage4.Controls.Add(Me.GroupBox4)
+        Me.TabPage4.Controls.Add(Me.Group_Typ_Automatyzacji)
+        Me.TabPage4.Controls.Add(Me.Group_Statystyka)
+        Me.TabPage4.Controls.Add(Me.Group_Interval)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(476, 371)
+        Me.TabPage4.Size = New System.Drawing.Size(500, 371)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Automation"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'GroupBox6
+        'Group_Typ_Automatyzacji
         '
-        Me.GroupBox6.Controls.Add(Me.L_PIC_Auto)
-        Me.GroupBox6.Controls.Add(Me.L_PIC_Save)
-        Me.GroupBox6.Controls.Add(Me.L_PIC_Send)
-        Me.GroupBox6.Controls.Add(Me.R_Send)
-        Me.GroupBox6.Controls.Add(Me.R_Save)
-        Me.GroupBox6.Controls.Add(Me.CheckAutomatyzacja)
-        Me.GroupBox6.Location = New System.Drawing.Point(3, 6)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(467, 99)
-        Me.GroupBox6.TabIndex = 38
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Operating mode od automation"
+        Me.Group_Typ_Automatyzacji.Controls.Add(Me.L_PIC_Auto)
+        Me.Group_Typ_Automatyzacji.Controls.Add(Me.L_PIC_Save)
+        Me.Group_Typ_Automatyzacji.Controls.Add(Me.L_PIC_Send)
+        Me.Group_Typ_Automatyzacji.Controls.Add(Me.R_Send)
+        Me.Group_Typ_Automatyzacji.Controls.Add(Me.R_Save)
+        Me.Group_Typ_Automatyzacji.Controls.Add(Me.CheckAutomatyzacja)
+        Me.Group_Typ_Automatyzacji.Location = New System.Drawing.Point(3, 6)
+        Me.Group_Typ_Automatyzacji.Name = "Group_Typ_Automatyzacji"
+        Me.Group_Typ_Automatyzacji.Size = New System.Drawing.Size(467, 99)
+        Me.Group_Typ_Automatyzacji.TabIndex = 38
+        Me.Group_Typ_Automatyzacji.TabStop = False
+        Me.Group_Typ_Automatyzacji.Text = "Operating mode od automation"
         '
         'L_PIC_Auto
         '
@@ -948,35 +957,35 @@ Partial Class Form_Ustawienia
         Me.CheckAutomatyzacja.Text = "Turn on automation after opening the program"
         Me.CheckAutomatyzacja.UseVisualStyleBackColor = True
         '
-        'GroupBox5
+        'Group_Statystyka
         '
-        Me.GroupBox5.Controls.Add(Me.Label17)
-        Me.GroupBox5.Controls.Add(Me.T_Liczba_Bledow)
-        Me.GroupBox5.Controls.Add(Me.T_Czas_Startu_Automatu)
-        Me.GroupBox5.Controls.Add(Me.Label20)
-        Me.GroupBox5.Controls.Add(Me.Label18)
-        Me.GroupBox5.Controls.Add(Me.T_Liczba_Zmienionych_Plikow)
-        Me.GroupBox5.Controls.Add(Me.T_Liczba_Cykli)
-        Me.GroupBox5.Controls.Add(Me.Label19)
-        Me.GroupBox5.Location = New System.Drawing.Point(3, 186)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(467, 136)
-        Me.GroupBox5.TabIndex = 37
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Statistics"
+        Me.Group_Statystyka.Controls.Add(Me.L_Start)
+        Me.Group_Statystyka.Controls.Add(Me.T_Liczba_Bledow)
+        Me.Group_Statystyka.Controls.Add(Me.T_Czas_Startu_Automatu)
+        Me.Group_Statystyka.Controls.Add(Me.L_Liczba_Bledow)
+        Me.Group_Statystyka.Controls.Add(Me.L_Liczba_Cykli)
+        Me.Group_Statystyka.Controls.Add(Me.T_Liczba_Zmienionych_Plikow)
+        Me.Group_Statystyka.Controls.Add(Me.T_Liczba_Cykli)
+        Me.Group_Statystyka.Controls.Add(Me.L_Liczba_Zapisanych_Plikow)
+        Me.Group_Statystyka.Location = New System.Drawing.Point(3, 186)
+        Me.Group_Statystyka.Name = "Group_Statystyka"
+        Me.Group_Statystyka.Size = New System.Drawing.Size(467, 136)
+        Me.Group_Statystyka.TabIndex = 37
+        Me.Group_Statystyka.TabStop = False
+        Me.Group_Statystyka.Text = "Statistics"
         '
-        'Label17
+        'L_Start
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(20, 27)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(51, 13)
-        Me.Label17.TabIndex = 29
-        Me.Label17.Text = "Start time"
+        Me.L_Start.AutoSize = True
+        Me.L_Start.Location = New System.Drawing.Point(20, 27)
+        Me.L_Start.Name = "L_Start"
+        Me.L_Start.Size = New System.Drawing.Size(51, 13)
+        Me.L_Start.TabIndex = 29
+        Me.L_Start.Text = "Start time"
         '
         'T_Liczba_Bledow
         '
-        Me.T_Liczba_Bledow.Location = New System.Drawing.Point(136, 102)
+        Me.T_Liczba_Bledow.Location = New System.Drawing.Point(163, 102)
         Me.T_Liczba_Bledow.Name = "T_Liczba_Bledow"
         Me.T_Liczba_Bledow.ReadOnly = True
         Me.T_Liczba_Bledow.Size = New System.Drawing.Size(148, 20)
@@ -984,33 +993,33 @@ Partial Class Form_Ustawienia
         '
         'T_Czas_Startu_Automatu
         '
-        Me.T_Czas_Startu_Automatu.Location = New System.Drawing.Point(136, 24)
+        Me.T_Czas_Startu_Automatu.Location = New System.Drawing.Point(163, 24)
         Me.T_Czas_Startu_Automatu.Name = "T_Czas_Startu_Automatu"
         Me.T_Czas_Startu_Automatu.ReadOnly = True
         Me.T_Czas_Startu_Automatu.Size = New System.Drawing.Size(148, 20)
         Me.T_Czas_Startu_Automatu.TabIndex = 30
         '
-        'Label20
+        'L_Liczba_Bledow
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(20, 105)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(76, 13)
-        Me.Label20.TabIndex = 35
-        Me.Label20.Text = "Count of errors"
+        Me.L_Liczba_Bledow.AutoSize = True
+        Me.L_Liczba_Bledow.Location = New System.Drawing.Point(20, 105)
+        Me.L_Liczba_Bledow.Name = "L_Liczba_Bledow"
+        Me.L_Liczba_Bledow.Size = New System.Drawing.Size(76, 13)
+        Me.L_Liczba_Bledow.TabIndex = 35
+        Me.L_Liczba_Bledow.Text = "Count of errors"
         '
-        'Label18
+        'L_Liczba_Cykli
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(20, 53)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(80, 13)
-        Me.Label18.TabIndex = 31
-        Me.Label18.Text = "Count of cycles"
+        Me.L_Liczba_Cykli.AutoSize = True
+        Me.L_Liczba_Cykli.Location = New System.Drawing.Point(20, 53)
+        Me.L_Liczba_Cykli.Name = "L_Liczba_Cykli"
+        Me.L_Liczba_Cykli.Size = New System.Drawing.Size(80, 13)
+        Me.L_Liczba_Cykli.TabIndex = 31
+        Me.L_Liczba_Cykli.Text = "Count of cycles"
         '
         'T_Liczba_Zmienionych_Plikow
         '
-        Me.T_Liczba_Zmienionych_Plikow.Location = New System.Drawing.Point(136, 76)
+        Me.T_Liczba_Zmienionych_Plikow.Location = New System.Drawing.Point(163, 76)
         Me.T_Liczba_Zmienionych_Plikow.Name = "T_Liczba_Zmienionych_Plikow"
         Me.T_Liczba_Zmienionych_Plikow.ReadOnly = True
         Me.T_Liczba_Zmienionych_Plikow.Size = New System.Drawing.Size(148, 20)
@@ -1018,36 +1027,36 @@ Partial Class Form_Ustawienia
         '
         'T_Liczba_Cykli
         '
-        Me.T_Liczba_Cykli.Location = New System.Drawing.Point(136, 50)
+        Me.T_Liczba_Cykli.Location = New System.Drawing.Point(163, 50)
         Me.T_Liczba_Cykli.Name = "T_Liczba_Cykli"
         Me.T_Liczba_Cykli.ReadOnly = True
         Me.T_Liczba_Cykli.Size = New System.Drawing.Size(148, 20)
         Me.T_Liczba_Cykli.TabIndex = 32
         '
-        'Label19
+        'L_Liczba_Zapisanych_Plikow
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(20, 79)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(100, 13)
-        Me.Label19.TabIndex = 33
-        Me.Label19.Text = "Count of saved files"
+        Me.L_Liczba_Zapisanych_Plikow.AutoSize = True
+        Me.L_Liczba_Zapisanych_Plikow.Location = New System.Drawing.Point(20, 79)
+        Me.L_Liczba_Zapisanych_Plikow.Name = "L_Liczba_Zapisanych_Plikow"
+        Me.L_Liczba_Zapisanych_Plikow.Size = New System.Drawing.Size(100, 13)
+        Me.L_Liczba_Zapisanych_Plikow.TabIndex = 33
+        Me.L_Liczba_Zapisanych_Plikow.Text = "Count of saved files"
         '
-        'GroupBox4
+        'Group_Interval
         '
-        Me.GroupBox4.Controls.Add(Me.Label16)
-        Me.GroupBox4.Controls.Add(Me.T_Interwal)
-        Me.GroupBox4.Controls.Add(Me.Num_Sekundy)
-        Me.GroupBox4.Controls.Add(Me.Num_Minuty)
-        Me.GroupBox4.Controls.Add(Me.Label11)
-        Me.GroupBox4.Controls.Add(Me.Label15)
-        Me.GroupBox4.Controls.Add(Me.Label6)
-        Me.GroupBox4.Location = New System.Drawing.Point(3, 111)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(467, 69)
-        Me.GroupBox4.TabIndex = 23
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Interval"
+        Me.Group_Interval.Controls.Add(Me.Label16)
+        Me.Group_Interval.Controls.Add(Me.T_Interwal)
+        Me.Group_Interval.Controls.Add(Me.Num_Sekundy)
+        Me.Group_Interval.Controls.Add(Me.Num_Minuty)
+        Me.Group_Interval.Controls.Add(Me.Label11)
+        Me.Group_Interval.Controls.Add(Me.Label15)
+        Me.Group_Interval.Controls.Add(Me.Label6)
+        Me.Group_Interval.Location = New System.Drawing.Point(3, 111)
+        Me.Group_Interval.Name = "Group_Interval"
+        Me.Group_Interval.Size = New System.Drawing.Size(467, 69)
+        Me.Group_Interval.TabIndex = 23
+        Me.Group_Interval.TabStop = False
+        Me.Group_Interval.Text = "Interval"
         '
         'Label16
         '
@@ -1114,7 +1123,7 @@ Partial Class Form_Ustawienia
         '
         'TabPage5
         '
-        Me.TabPage5.Controls.Add(Me.l_Page_Settings_Opis)
+        Me.TabPage5.Controls.Add(Me.L_Page_Settings_Opis)
         Me.TabPage5.Controls.Add(Me.R_Half_PDF)
         Me.TabPage5.Controls.Add(Me.R_Pages)
         Me.TabPage5.Controls.Add(Me.Check_Process_File)
@@ -1124,20 +1133,20 @@ Partial Class Form_Ustawienia
         Me.TabPage5.Controls.Add(Me.L_Pic_Half_PDF)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(476, 371)
+        Me.TabPage5.Size = New System.Drawing.Size(500, 371)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Page settings"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'l_Page_Settings_Opis
+        'L_Page_Settings_Opis
         '
-        Me.l_Page_Settings_Opis.Location = New System.Drawing.Point(16, 63)
-        Me.l_Page_Settings_Opis.Name = "l_Page_Settings_Opis"
-        Me.l_Page_Settings_Opis.Size = New System.Drawing.Size(436, 200)
-        Me.l_Page_Settings_Opis.TabIndex = 47
-        Me.l_Page_Settings_Opis.Text = "If option ""Process whole PDF file"" is disabled, program will split PDF file to pa" &
+        Me.L_Page_Settings_Opis.Location = New System.Drawing.Point(16, 63)
+        Me.L_Page_Settings_Opis.Name = "L_Page_Settings_Opis"
+        Me.L_Page_Settings_Opis.Size = New System.Drawing.Size(436, 32)
+        Me.L_Page_Settings_Opis.TabIndex = 47
+        Me.L_Page_Settings_Opis.Text = "If option ""Process whole PDF file"" is disabled, program will split PDF file to pa" &
     "ges usings settings on this page."
-        Me.l_Page_Settings_Opis.Visible = False
+        Me.L_Page_Settings_Opis.Visible = False
         '
         'R_Half_PDF
         '
@@ -1197,7 +1206,7 @@ Partial Class Form_Ustawienia
         Me.SplitC.Panel2.Controls.Add(Me.L_Pic_Group_Pages)
         Me.SplitC.Panel2.Controls.Add(Me.R_Not_Contain)
         Me.SplitC.Panel2.Controls.Add(Me.R_Contain)
-        Me.SplitC.Panel2.Controls.Add(Me.Label22)
+        Me.SplitC.Panel2.Controls.Add(Me.L_Text_ToFind)
         Me.SplitC.Panel2.Controls.Add(Me.L_Przyklad)
         Me.SplitC.Panel2.Controls.Add(Me.T_Tekst_Na_Stronach)
         Me.SplitC.Panel2.Controls.Add(Me.L_Pic_Not_Contain)
@@ -1271,14 +1280,14 @@ Partial Class Form_Ustawienia
         Me.R_Contain.Text = "Take if page contain word"
         Me.R_Contain.UseVisualStyleBackColor = True
         '
-        'Label22
+        'L_Text_ToFind
         '
-        Me.Label22.Location = New System.Drawing.Point(20, 9)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(239, 18)
-        Me.Label22.TabIndex = 43
-        Me.Label22.Text = "Define text to be find in PDF file"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.L_Text_ToFind.Location = New System.Drawing.Point(20, 9)
+        Me.L_Text_ToFind.Name = "L_Text_ToFind"
+        Me.L_Text_ToFind.Size = New System.Drawing.Size(239, 18)
+        Me.L_Text_ToFind.TabIndex = 43
+        Me.L_Text_ToFind.Text = "Define text to be find in PDF file"
+        Me.L_Text_ToFind.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'L_Przyklad
         '
@@ -1334,6 +1343,67 @@ Partial Class Form_Ustawienia
         Me.L_Pic_Half_PDF.Size = New System.Drawing.Size(13, 14)
         Me.L_Pic_Half_PDF.TabIndex = 37
         '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.Group_Jezyk)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Size = New System.Drawing.Size(500, 371)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Language"
+        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'Group_Jezyk
+        '
+        Me.Group_Jezyk.Controls.Add(Me.R_Polski)
+        Me.Group_Jezyk.Controls.Add(Me.L_Pic_Polski)
+        Me.Group_Jezyk.Controls.Add(Me.L_Pick_English)
+        Me.Group_Jezyk.Controls.Add(Me.R_English)
+        Me.Group_Jezyk.Location = New System.Drawing.Point(8, 16)
+        Me.Group_Jezyk.Name = "Group_Jezyk"
+        Me.Group_Jezyk.Size = New System.Drawing.Size(483, 99)
+        Me.Group_Jezyk.TabIndex = 39
+        Me.Group_Jezyk.TabStop = False
+        Me.Group_Jezyk.Text = "Change language"
+        '
+        'R_Polski
+        '
+        Me.R_Polski.Appearance = System.Windows.Forms.Appearance.Button
+        Me.R_Polski.Location = New System.Drawing.Point(24, 27)
+        Me.R_Polski.Name = "R_Polski"
+        Me.R_Polski.Size = New System.Drawing.Size(79, 25)
+        Me.R_Polski.TabIndex = 31
+        Me.R_Polski.Text = "Polski"
+        Me.R_Polski.UseVisualStyleBackColor = True
+        '
+        'L_Pic_Polski
+        '
+        Me.L_Pic_Polski.BackColor = System.Drawing.Color.Red
+        Me.L_Pic_Polski.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.L_Pic_Polski.Location = New System.Drawing.Point(5, 33)
+        Me.L_Pic_Polski.Name = "L_Pic_Polski"
+        Me.L_Pic_Polski.Size = New System.Drawing.Size(13, 14)
+        Me.L_Pic_Polski.TabIndex = 30
+        '
+        'L_Pick_English
+        '
+        Me.L_Pick_English.BackColor = System.Drawing.Color.Red
+        Me.L_Pick_English.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.L_Pick_English.Location = New System.Drawing.Point(5, 63)
+        Me.L_Pick_English.Name = "L_Pick_English"
+        Me.L_Pick_English.Size = New System.Drawing.Size(13, 14)
+        Me.L_Pick_English.TabIndex = 29
+        '
+        'R_English
+        '
+        Me.R_English.Appearance = System.Windows.Forms.Appearance.Button
+        Me.R_English.Location = New System.Drawing.Point(22, 57)
+        Me.R_English.Name = "R_English"
+        Me.R_English.Size = New System.Drawing.Size(79, 25)
+        Me.R_English.TabIndex = 26
+        Me.R_English.Text = "English"
+        Me.R_English.UseVisualStyleBackColor = True
+        '
         'Timer_Pic
         '
         Me.Timer_Pic.Interval = 50
@@ -1344,7 +1414,7 @@ Partial Class Form_Ustawienia
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Btn_Anuluj
-        Me.ClientSize = New System.Drawing.Size(482, 452)
+        Me.ClientSize = New System.Drawing.Size(507, 452)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Btn_Anuluj)
         Me.Controls.Add(Me.Btn_Zapisz)
@@ -1365,30 +1435,30 @@ Partial Class Form_Ustawienia
         Me.Group_Destination.PerformLayout()
         CType(Me.Pic_Destination, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.Group_FileName.ResumeLayout(False)
+        Me.Group_FileName.PerformLayout()
         CType(Me.Pic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Num_Dlugosc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Num_Start, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_Wybierz_Przyklad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.Group_Control_String.ResumeLayout(False)
+        Me.Group_Control_String.PerformLayout()
         CType(Me.Pic_Sec, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.Group_Pozycja_Control_Stringu.ResumeLayout(False)
+        Me.Group_Pozycja_Control_Stringu.PerformLayout()
         CType(Me.Pic1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Num_Start1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Num_Dlugosc1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_Wybierz_Przyklad1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
+        Me.Group_Typ_Automatyzacji.ResumeLayout(False)
+        Me.Group_Typ_Automatyzacji.PerformLayout()
+        Me.Group_Statystyka.ResumeLayout(False)
+        Me.Group_Statystyka.PerformLayout()
+        Me.Group_Interval.ResumeLayout(False)
+        Me.Group_Interval.PerformLayout()
         CType(Me.Num_Sekundy, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Num_Minuty, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
@@ -1397,6 +1467,8 @@ Partial Class Form_Ustawienia
         Me.SplitC.Panel2.PerformLayout()
         CType(Me.SplitC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitC.ResumeLayout(False)
+        Me.TabPage6.ResumeLayout(False)
+        Me.Group_Jezyk.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1405,11 +1477,11 @@ Partial Class Form_Ustawienia
     Friend WithEvents T_Sciezka_PDF As TextBox
     Friend WithEvents Pic_PDF As PictureBox
     Friend WithEvents Group_FTP As GroupBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents L_Haslo As Label
     Friend WithEvents T_Sciezka_FTP As TextBox
     Friend WithEvents T_Haslo As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents L_Adres As Label
+    Friend WithEvents L_Login As Label
     Friend WithEvents Pic_FTP As PictureBox
     Friend WithEvents T_Login As TextBox
     Friend WithEvents Btn_Zapisz As Button
@@ -1419,10 +1491,10 @@ Partial Class Form_Ustawienia
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Group_FileName As GroupBox
     Friend WithEvents Num_Dlugosc As NumericUpDown
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents L_Number_Chars As Label
+    Friend WithEvents L_Start_Position As Label
     Friend WithEvents Num_Start As NumericUpDown
     Friend WithEvents R_Podglad As RichTextBox
     Friend WithEvents Pic_Wybierz_Przyklad As PictureBox
@@ -1434,21 +1506,21 @@ Partial Class Form_Ustawienia
     Friend WithEvents Label9 As Label
     Friend WithEvents T_Prefix As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents L_New_File_Name As Label
     Friend WithEvents T_Klucz As TextBox
-    Friend WithEvents Label10 As Label
+    Friend WithEvents L_Specified_Text As Label
     Friend WithEvents L_Opis_Careta As Label
     Friend WithEvents L_Pozycja_Karety As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Group_Control_String As GroupBox
     Friend WithEvents T_Control_String As TextBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label13 As Label
+    Friend WithEvents Group_Pozycja_Control_Stringu As GroupBox
+    Friend WithEvents L_Specified_Text1 As Label
     Friend WithEvents Num_Start1 As NumericUpDown
     Friend WithEvents T_Klucz1 As TextBox
-    Friend WithEvents Label14 As Label
+    Friend WithEvents L_Start_Position1 As Label
     Friend WithEvents Num_Dlugosc1 As NumericUpDown
-    Friend WithEvents Label12 As Label
+    Friend WithEvents L_Number_Chars1 As Label
     Friend WithEvents Pic_Wybierz_Przyklad1 As PictureBox
     Friend WithEvents R_Podglad1 As RichTextBox
     Friend WithEvents L_Wybierz_Przyklad1 As Label
@@ -1463,7 +1535,7 @@ Partial Class Form_Ustawienia
     Friend WithEvents Check_FTP As CheckBox
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents Num_Minuty As NumericUpDown
-    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Group_Interval As GroupBox
     Friend WithEvents CheckAutomatyzacja As CheckBox
     Friend WithEvents Num_Sekundy As NumericUpDown
     Friend WithEvents Label11 As Label
@@ -1472,15 +1544,15 @@ Partial Class Form_Ustawienia
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents T_Liczba_Cykli As TextBox
-    Friend WithEvents Label18 As Label
+    Friend WithEvents L_Liczba_Cykli As Label
     Friend WithEvents T_Czas_Startu_Automatu As TextBox
-    Friend WithEvents Label17 As Label
+    Friend WithEvents L_Start As Label
     Friend WithEvents T_Liczba_Bledow As TextBox
-    Friend WithEvents Label20 As Label
+    Friend WithEvents L_Liczba_Bledow As Label
     Friend WithEvents T_Liczba_Zmienionych_Plikow As TextBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents GroupBox5 As GroupBox
-    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents L_Liczba_Zapisanych_Plikow As Label
+    Friend WithEvents Group_Statystyka As GroupBox
+    Friend WithEvents Group_Typ_Automatyzacji As GroupBox
     Friend WithEvents R_Send As RadioButton
     Friend WithEvents R_Save As RadioButton
     Friend WithEvents L_PIC_Save As Label
@@ -1507,14 +1579,20 @@ Partial Class Form_Ustawienia
     Friend WithEvents L_Pic_Half_PDF As Label
     Friend WithEvents Check_Process_File As CheckBox
     Friend WithEvents L_Pick_Process_File As Label
-    Friend WithEvents Label22 As Label
+    Friend WithEvents L_Text_ToFind As Label
     Friend WithEvents R_Half_PDF As RadioButton
     Friend WithEvents R_Pages As RadioButton
     Friend WithEvents R_Not_Contain As RadioButton
     Friend WithEvents R_Contain As RadioButton
     Friend WithEvents L_Pic_Group_Pages As Label
     Friend WithEvents C_Group_Pages As CheckBox
-    Friend WithEvents l_Page_Settings_Opis As Label
+    Friend WithEvents L_Page_Settings_Opis As Label
     Friend WithEvents L_Pic_Duplicates As Label
     Friend WithEvents Check_Duplicates As CheckBox
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents Group_Jezyk As GroupBox
+    Friend WithEvents L_Pic_Polski As Label
+    Friend WithEvents L_Pick_English As Label
+    Friend WithEvents R_English As RadioButton
+    Friend WithEvents R_Polski As RadioButton
 End Class
