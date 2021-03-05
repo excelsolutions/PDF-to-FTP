@@ -1,4 +1,5 @@
-﻿Imports System
+﻿Imports System.Resources
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -10,9 +11,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("PDF to FTP")>
 <Assembly: AssemblyDescription("Program do zmiany nazw plików PDF na podstawie ich treści oraz ich wysyłania na wskazany serwer FTP.")>
-<Assembly: AssemblyCompany("Łukasz Morawski")>
+<Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("PDF to FTP")>
-<Assembly: AssemblyCopyright("Copyright © 2018 Łukasz Morawski")>
+<Assembly: AssemblyCopyright("Copyright © 2018")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +32,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.8.0")>
+<Assembly: AssemblyFileVersion("1.0.8.0")>
+<Assembly: NeutralResourcesLanguage("pl")>
